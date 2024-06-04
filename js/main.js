@@ -14,6 +14,10 @@ window.onload = function () {
     .addEventListener("submit", function (event) {
       event.preventDefault();
 
+      if (!validarForm()) {
+        return;
+      }
+
       emailjs.sendForm("service_m32z9s6", "contact_form", this).then(
         () => {
           console.log("SUCCESS!");
@@ -40,35 +44,44 @@ window.onload = function () {
     });
 };
 
-//valores de los campos
-const form = document.getElementsByTagName("form");
-const nombre = document.getElementById("name").value.trim();
-const email = document.getElementById("email").value.trim();
-const telefono = document.getElementById("telefono").value.trim();
-const message = document.getElementById("mensaje").value.trim();
-const error = document.getElementById("error");
-
-const emailRegExp =
-  /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
-
-let isValid = true;
-
 function validarForm() {
+  const nombre = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const telefono = document.getElementById("telefono").value.trim();
+  const message = document.getElementById("mensaje").value.trim();
+  const emailRegExp = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
+  const telefonoRegExp = /^[0-9]{10}$/;
+
+  let isValid = true;
+
   if (nombre === "") {
     alert("Por favor ingrese su nombre.");
     isValid = false;
   }
-  if (email === "") {
-    alert("Por favor ingrese un correo válido");
+  if (email === "" || !emailRegExp.test(email)) {
+    alert("Por favor ingrese un correo válido.");
     isValid = false;
   }
+  if (numCel === "" || !telefonoRegExp.test(numCel)) {
+    alert("Por favor ingrese un número de teléfono válido (10 dígitos).");
+    isValid = false;
+  }
+  if (message === "") {
+    alert("Por favor ingrese un mensaje.");
+    isValid = false;
+  }
+
   if (isValid) {
     alert("Formulario enviado exitosamente!");
   }
+
+  return isValid;
 }
+
 let btnEnviar = document
   .getElementById("btnEnviar")
   .addEventListener("click", function (event) {
     event.preventDefault();
     validarForm();
   });
+
