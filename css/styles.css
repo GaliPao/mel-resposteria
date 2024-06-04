@@ -1,10 +1,8 @@
 /* CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS */
 .card {
-  background: linear-gradient(
-    -45deg,
-    rgba(182, 41, 41, 0.242) 100px,
-    transparent 0
-  );
+  background: linear-gradient(-45deg,
+      rgba(182, 41, 41, 0.242) 100px,
+      transparent 0);
   border-radius: 15px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
   color: rgb(0, 0, 0);
@@ -14,16 +12,8 @@
   text-align: center;
   overflow: hidden;
   width: 230px;
-  transition: all 0.3s ease;
 }
 
-.card:hover {
-  transition: all 0.01s;
-  box-shadow: 5px 5px 15px rgba(229, 0, 0, 0.5);
-  height: 440px;
-  width: 250px;
-  font-size: 15px;
-}
 
 .card-h1 {
   font-size: 13px;
@@ -33,11 +23,13 @@
   position: relative;
   text-transform: uppercase;
 }
+
 .card-h2 {
   font-size: 10px;
   letter-spacing: 1px;
   font-weight: 600;
 }
+
 .card-p {
   font-size: 10px;
   font-weight: 300;
@@ -47,12 +39,14 @@
   text-align: justify;
 }
 
+
 .card-img {
   border: 5px solid rgba(255, 255, 255, 0.1);
   border-radius: 100%;
   height: 50%;
   width: auto;
 }
+
 
 .overlay {
   position: absolute;
@@ -66,13 +60,6 @@
   transition: opacity 0.3s ease;
 }
 
-.card:hover .overlay {
-  opacity: 1;
-}
-
-.card:hover .card-botones {
-  margin-top: 30px;
-}
 
 .card-botones {
   padding: 0px;
@@ -81,29 +68,137 @@
   gap: 10px;
 }
 
+
 .card-boton {
   width: 25px;
   margin-left: 25px;
 }
 
+.card-botones:hover {
+  transform: scale(1.1);
+
+}
+
+.imagen_1 {
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  height: 50%;
+  width: auto;
+  background-image: url(../src/fotos-team/Eduardo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-position-y: center;
+  transition: 300ms;
+  filter: drop-shadow(5px -4px 10px rgba(0, 0, 0, 0.604));
+}
+
+
+.card .imagen_1:hover {
+  transform: translate(0px);
+  transition: 300ms;
+  box-shadow: 5px 5px 15px rgba(229, 0, 0, 0.5);
+  background-image: url(../src/fotos-team/eduardo-galleta.png);
+  background-size: cover;
+  background-position: center;
+  background-position-y: center;
+}
+
+.imagen_2 {
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  height: 50%;
+  width: auto;
+  background-image: url(../src/fotos-team/Paola.jpg);
+  background-size: cover;
+  background-position: center;
+  background-position-y: center;
+  transition: 300ms;
+  filter: drop-shadow(5px -4px 10px rgba(0, 0, 0, 0.604));
+}
+
+.card .imagen_2:hover {
+  transform: translate(0px);
+  transition: 300ms;
+  box-shadow: 5px 5px 15px rgba(229, 0, 0, 0.5);
+  background-image: url(../src/fotos-team/galletasPao.jpg);
+  background-size: cover;
+  background-position: center;
+  background-position-y: center;
+}
+
+.imagen_3 {
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  height: 50%;
+  width: auto;
+  background-image: url(../src/fotos-team/fotodaniel.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-position-y: center;
+  transition: 300ms;
+  filter: drop-shadow(5px -4px 10px rgba(0, 0, 0, 0.604));
+}
+.card .imagen_3:hover {
+  transform: translate(0px);
+  transition: 300ms;
+  box-shadow: 5px 5px 15px rgba(229, 0, 0, 0.5);
+  background-image: url(../src/fotos-team/galletadaniel.jpg);
+  background-size: cover;
+  background-position: center;
+  background-position-y: center;
+}
+.imagen_4 {
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  height: 50%;
+  width: auto;
+  background-image: url(../src/fotos-team/Melanie.jpg);
+  background-size: cover;
+  background-position: center;
+  background-position-y: center;
+  transition: 300ms;
+  filter: drop-shadow(5px -4px 10px rgba(0, 0, 0, 0.604));
+}
+.card .imagen_4:hover {
+  transform: translate(0px);
+  transition: 300ms;
+  box-shadow: 5px 5px 15px rgba(229, 0, 0, 0.5);
+  background-image: url(../src/fotos-team/galletamel.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-position-y: center;
+}
+
+
+
+
+
+
 /* CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS */
+
 
 /* HEADER  */
 header {
   font-family: "Comic Neue";
 }
 
+
 .custom-bg-rosa {
-  background-color: #ffdad8; /* Color rosa claro en hexadecimal */
+  background-color: #ffdad8;
+  /* Color rosa claro en hexadecimal */
 }
 
+
 .custom-btn-color1 {
-  background-color: #ff1493; /* Color rosa intenso en hexadecimal */
+  background-color: #ff1493;
+  /* Color rosa intenso en hexadecimal */
 }
+
 .custom-btn-color1 span {
   width: 50px;
   height: auto;
 }
+
 
 /* HEADER */
 /* FOOTER  FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
@@ -112,6 +207,7 @@ header {
   padding: 0;
   box-sizing: border-box;
 }
+
 
 .footer {
   background-color: white;
@@ -122,6 +218,7 @@ header {
   justify-content: center;
 }
 
+
 .cards-container {
   display: flex;
   flex-wrap: wrap;
@@ -129,6 +226,8 @@ header {
   gap: 20px;
   padding: 20px;
 }
+
+
 
 
 .contenedor {
@@ -141,6 +240,7 @@ header {
   flex-wrap: wrap;
 }
 
+
 .barra {
   display: flex;
   flex-wrap: wrap;
@@ -149,11 +249,13 @@ header {
   width: 100%;
 }
 
+
 .logo img {
   max-width: 100px;
   height: auto;
   align-self: flex-start;
 }
+
 
 .navegacion {
   display: flex;
@@ -164,11 +266,13 @@ header {
   width: 100%;
 }
 
+
 .seccion {
   flex: 1;
   margin: 10px;
   text-align: center;
 }
+
 
 h3 {
   margin-bottom: 10px;
@@ -177,6 +281,7 @@ h3 {
   color: #ff2e73;
 }
 
+
 a {
   color: #f5ceae;
   text-decoration: none;
@@ -184,9 +289,13 @@ a {
   margin-bottom: 5px;
 }
 
+
 a:hover {
   text-decoration: underline;
 }
+
+
+
 
 
 
@@ -195,19 +304,23 @@ a:hover {
     flex-direction: column;
   }
 
+
   .barra {
     flex-direction: column;
     text-align: center;
   }
+
 
   .navegacion {
     flex-direction: column;
     align-items: center;
   }
 
+
   .seccion {
     margin: 10px 0;
   }
 }
+
 
 /* FOOTER  FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
