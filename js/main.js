@@ -20,6 +20,7 @@ window.onload = function () {
         () => {
           console.log("SUCCESS!");
           mensaje.classList.add("mensaje-exito");
+
           mensaje.innerHTML = `
           <div class="mensaje-exito">
           <h2>Gracias 🎉 ${this.name.value}</h2>
@@ -42,50 +43,61 @@ window.onload = function () {
     });
 };
 
-//valores de los campos
-const form = document.getElementsByTagName("form");
-const nombre = document.getElementById("name").value.trim();
-const email = document.getElementById("email").value.trim();
-const telefono = document.getElementById("numCel").value.trim();
-const message = document.getElementById("mensaje").value.trim();
-const error = document.getElementById("error");
+btnEnviar.addEventListener("submit", validarForm); //no se llama a la funcion con parentesis
 
-const emailRegExp =
-  /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
+//variables expresiones regulares formulario
+// const nombreTest = /^[a-zA-Z\u00C0-\u017F\s]{3,70}$/;
+// const emailValidacion = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+// const numeroValidacion = /^[0-9]{10}$/;
+// const mensajeValidacion = /^[a-zA-Z\u00C0-\u017F\s]{2,}$/;
+// const isValid = true;
+// const btnEnviar = document.getElementById("btnEnviar");
+///
+// function validarForm(event) {
+//   event.preventDefault();
+//   if (nombreTest.test(nombre) == false) {
+//     mensaje.innerHTML = `
+//           <div>
+//           <h2>Llena el campo de nombre correctamente</h2>
+//          </div>`; // mensaje que aparece cuando se mande el form por correo
+//     footer.insertAdjacentElement("beforebegin", mensaje);
+//     invalido(nombre);
+//   } else {
+//     valido(nombre);
+//   }
+//   if (emailValidacion.test(email) == false) {
+//     mensaje.innerHTML = `
+//           <div>
+//           <h2>Llenar el campo de correo correctamente \nPor ejemplo: correo123@gmail.com </h2>
+//          </div>`; // mensaje que aparece cuando se mande el form por correo
+//     footer.insertAdjacentElement("beforebegin", mensaje);
+//     invalido(email);
+//   } else {
+//     valido(email);
+//   }
+//   if (numeroValidacion.test(telefono) == false) {
+//     mensaje.innerHTML = `
+//           <div>
+//           <h2>Llenar el campo de telefono con 10 digitos numericos </h2>
+//          </div>`; // mensaje que aparece cuando se mande el form por correo
+//     footer.insertAdjacentElement("beforebegin", mensaje);
+//     invalido(telefono);
+//   } else {
+//     valido(telefono);
+//   }
+//   if (mensajeValidacion.test(message) == false) {
+//     mensaje.innerHTML = `
+//           <div>
+//           <h2>Llena el campo de mensaje correctamente. </h2>
+//          </div>`; // mensaje que aparece cuando se mande el form por correo
+//     footer.insertAdjacentElement("beforebegin", mensaje);
+//     invalido(message);
+//   }
 
-let isValid = true;
-
-function validarForm() {
-  if (nombre === "") {
-    alert("Por favor ingrese su nombre.");
-    isValid = false;
-  }
-  if (email === "") {
-    alert("Por favor ingrese un correo válido");
-    isValid = false;
-  }
-  if (isValid) {
-    alert("Formulario enviado exitosamente!");
-  }
-}
-
-let btnEnviar = document
-  .getElementById("btnEnviar")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-    validarForm();
-  });
-
-const numCel = document.getElementById("numCel");
-document.getElementById("numCel").addEventListener("input", function () {
-  const errorMessage = document.getElementById("error-message");
-  const valNum = /^\d{10}$/;
-
-  if (valNum.test(numCel.value)) {
-    errorMessage.style.display = "none";
-    numCel.style.borderColor = "initial";
-  } else {
-    errorMessage.style.display = "block";
-    numCel.style.borderColor = "red";
-  }
-});
+//   if (mensaje.length > 1) {
+//     alert(mensaje);
+//     isValid = false;
+//   } else {
+//     //reseteamos y borramos todo
+//   }
+// }
