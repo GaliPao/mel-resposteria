@@ -12,8 +12,23 @@
   text-align: center;
   overflow: hidden;
   width: 230px;
+<<<<<<< HEAD
 }
 
+=======
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  
+  box-shadow: 5px 5px 15px rgba(229, 0, 0, 0.5);
+  height: 440px;
+  width: 250px;
+  font-size: 15px;
+}
+>>>>>>> 024a1112bd194f4697335160b440508dea375eaf
 
 .card-h1 {
   font-size: 13px;
@@ -37,6 +52,7 @@
   margin: 5px auto 5px;
   width: 100%;
   text-align: justify;
+  flex-grow: 1;
 }
 
 
@@ -55,7 +71,6 @@
   width: 100%;
   height: 80%;
   background-size: contain;
-  background: url(resources/fotos-team/eduardo-galleta.png);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -74,17 +89,25 @@
   margin-left: 25px;
 }
 
+<<<<<<< HEAD
 .card-botones:hover {
   transform: scale(1.1);
 
 }
 
 .imagen_1 {
+=======
+.imagen_Eduardo {
+>>>>>>> 024a1112bd194f4697335160b440508dea375eaf
   border: 5px solid rgba(255, 255, 255, 0.1);
   border-radius: 100%;
   height: 50%;
   width: auto;
+<<<<<<< HEAD
   background-image: url(../src/fotos-team/Eduardo.jpg);
+=======
+  background-image: url(/src/fotos-team/Eduardo.jpg);
+>>>>>>> 024a1112bd194f4697335160b440508dea375eaf
   background-size: cover;
   background-position: center;
   background-position-y: center;
@@ -92,6 +115,7 @@
   filter: drop-shadow(5px -4px 10px rgba(0, 0, 0, 0.604));
 }
 
+<<<<<<< HEAD
 
 .card .imagen_1:hover {
   transform: translate(0px);
@@ -104,11 +128,20 @@
 }
 
 .imagen_2 {
+=======
+.card .imagen_Eduardo:hover {
+  transform: translate(0px);
+  transition: 300ms;
+  box-shadow: 5px 5px 15px rgba(229, 0, 0, 0.5);
+  background-image: url(/src/fotos-team/eduardo-galleta.png);
+}
+
+.imagen_Paola {
   border: 5px solid rgba(255, 255, 255, 0.1);
   border-radius: 100%;
   height: 50%;
   width: auto;
-  background-image: url(../src/fotos-team/Paola.jpg);
+  background-image: url(/src/fotos-team/Paola.jpg);
   background-size: cover;
   background-position: center;
   background-position-y: center;
@@ -116,6 +149,33 @@
   filter: drop-shadow(5px -4px 10px rgba(0, 0, 0, 0.604));
 }
 
+.card .imagen_Paola:hover {
+  transform: translate(0px);
+  transition: 300ms;
+  box-shadow: 5px 5px 15px rgba(229, 0, 0, 0.5);
+  background-image: url(/src/fotos-team/galletasPao.jpg);
+}
+
+
+.imagen_Daniel{
+>>>>>>> 024a1112bd194f4697335160b440508dea375eaf
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  height: 50%;
+  width: auto;
+<<<<<<< HEAD
+  background-image: url(../src/fotos-team/Paola.jpg);
+=======
+  background-image: url(/src/fotos-team/fotodaniel.jpeg);
+>>>>>>> 024a1112bd194f4697335160b440508dea375eaf
+  background-size: cover;
+  background-position: center;
+  background-position-y: center;
+  transition: 300ms;
+  filter: drop-shadow(5px -4px 10px rgba(0, 0, 0, 0.604));
+}
+
+<<<<<<< HEAD
 .card .imagen_2:hover {
   transform: translate(0px);
   transition: 300ms;
@@ -127,17 +187,53 @@
 }
 
 .imagen_3 {
+=======
+.card .imagen_Daniel:hover {
+  transform: translate(0px);
+  transition: 300ms;
+  box-shadow: 5px 5px 15px rgba(229, 0, 0, 0.5);
+  background-image: url(/src/fotos-team/galletadaniel.jpg);
+}
+
+
+.imagen_Melanie{
   border: 5px solid rgba(255, 255, 255, 0.1);
   border-radius: 100%;
   height: 50%;
   width: auto;
-  background-image: url(../src/fotos-team/fotodaniel.jpeg);
+  background-image: url(/src/fotos-team/Melanie.jpg);
   background-size: cover;
   background-position: center;
   background-position-y: center;
   transition: 300ms;
   filter: drop-shadow(5px -4px 10px rgba(0, 0, 0, 0.604));
 }
+
+.card .imagen_Melanie:hover{
+  transform: translate(0px);
+  transition: 300ms;
+   box-shadow: 5px 5px 15px rgba(229, 0, 0, 0.5);
+  background-image: url(/src/fotos-team/galletaMel.jpg);
+ }
+
+ .imagen_Vane {
+>>>>>>> 024a1112bd194f4697335160b440508dea375eaf
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  height: 50%;
+  width: auto;
+<<<<<<< HEAD
+  background-image: url(../src/fotos-team/fotodaniel.jpeg);
+=======
+  background-image: url(/src/fotos-team/Vane.jpeg);
+>>>>>>> 024a1112bd194f4697335160b440508dea375eaf
+  background-size: cover;
+  background-position: center;
+  background-position-y: center;
+  transition: 300ms;
+  filter: drop-shadow(5px -4px 10px rgba(0, 0, 0, 0.604));
+}
+<<<<<<< HEAD
 .card .imagen_3:hover {
   transform: translate(0px);
   transition: 300ms;
@@ -148,17 +244,55 @@
   background-position-y: center;
 }
 .imagen_4 {
+=======
+
+.card .imagen_Vane:hover {
+  transform: translate(0px);
+  transition: 300ms;
+  box-shadow: 5px 5px 15px rgba(229, 0, 0, 0.5);
+  background-image: url(/src/fotos-team/galletasVane.jpeg);
+
+}
+
+.imagen_Ana {
   border: 5px solid rgba(255, 255, 255, 0.1);
   border-radius: 100%;
   height: 50%;
   width: auto;
-  background-image: url(../src/fotos-team/Melanie.jpg);
+  background-image: url(/src/fotos-team/Ana.jpg);
   background-size: cover;
   background-position: center;
   background-position-y: center;
   transition: 300ms;
   filter: drop-shadow(5px -4px 10px rgba(0, 0, 0, 0.604));
 }
+
+.card .imagen_Ana:hover {
+  transform: translate(0px);
+  transition: 300ms;
+  box-shadow: 5px 5px 15px rgba(229, 0, 0, 0.5);
+  background-image: url(/src/fotos-team/galletasAna.jpg);
+}
+
+
+.imagen_Jezer {
+>>>>>>> 024a1112bd194f4697335160b440508dea375eaf
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  height: 50%;
+  width: auto;
+<<<<<<< HEAD
+  background-image: url(../src/fotos-team/Melanie.jpg);
+=======
+  background-image: url(/src/fotos-team/fotoJezer.jpg);
+>>>>>>> 024a1112bd194f4697335160b440508dea375eaf
+  background-size: cover;
+  background-position: center;
+  background-position-y: center;
+  transition: 300ms;
+  filter: drop-shadow(5px -4px 10px rgba(0, 0, 0, 0.604));
+}
+<<<<<<< HEAD
 .card .imagen_4:hover {
   transform: translate(0px);
   transition: 300ms;
@@ -172,6 +306,36 @@
 
 
 
+=======
+
+.card .imagen_Jezer:hover {
+  transform: translate(0px);
+  transition: 300ms;
+  box-shadow: 5px 5px 15px rgba(229, 0, 0, 0.5);
+  background-image: url(/src/fotos-team/galletaJezer.jpg);
+  
+}
+
+.imagen_Luis {
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  height: 50%;
+  width: auto;
+  background-image: url(/src/fotos-team/fotoLuisLeobardo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-position-y: center;
+  transition: 300ms;
+  filter: drop-shadow(5px -4px 10px rgba(0, 0, 0, 0.604));
+}
+
+.card .imagen_Luis:hover {
+  transform: translate(0px);
+  transition: 300ms;
+  box-shadow: 5px 5px 15px rgba(229, 0, 0, 0.5);
+  background-image: url(/src/fotos-team/galletaLuis.png); 
+}
+>>>>>>> 024a1112bd194f4697335160b440508dea375eaf
 
 
 /* CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS */
@@ -202,6 +366,7 @@ header {
 
 /* HEADER */
 /* FOOTER  FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
+<<<<<<< HEAD
 .footer {
   margin: 0;
   padding: 0;
@@ -219,13 +384,17 @@ header {
 }
 
 
+=======
+>>>>>>> 024a1112bd194f4697335160b440508dea375eaf
 .cards-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  text-align: center;
   gap: 20px;
-  padding: 20px;
+  margin-left: 10px;
 }
+<<<<<<< HEAD
 
 
 
@@ -238,6 +407,10 @@ header {
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+=======
+.col{
+  justify-content: center;
+>>>>>>> 024a1112bd194f4697335160b440508dea375eaf
 }
 
 
@@ -247,6 +420,7 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  background-color: white
 }
 
 
@@ -280,13 +454,23 @@ h3 {
   font-weight: bold;
   color: #ff2e73;
 }
+/* Ajustar el tamaño del botón desplegable */
+.nav-link.dropdown-toggle.badge.custom-btn-color1 {
+  font-size: 1rem; /* Ajusta el tamaño del texto */
+  padding: 10px 20px; 
+}
+
+.nav-link.dropdown-toggle.badge.custom-btn-color1 span {
+  font-size: 1rem; /* Ajusta el tamaño del texto del span */
+}
 
 
 a {
-  color: #f5ceae;
+  color: #ff9183;
   text-decoration: none;
   display: block;
   margin-bottom: 5px;
+  font-weight: 650;
 }
 
 
@@ -294,6 +478,7 @@ a:hover {
   text-decoration: underline;
 }
 
+<<<<<<< HEAD
 
 
 
@@ -305,6 +490,10 @@ a:hover {
   }
 
 
+=======
+@media (max-width: 768px) {
+ 
+>>>>>>> 024a1112bd194f4697335160b440508dea375eaf
   .barra {
     flex-direction: column;
     text-align: center;
@@ -323,4 +512,17 @@ a:hover {
 }
 
 
+<<<<<<< HEAD
 /* FOOTER  FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
+=======
+
+/* FOOTER  FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
+
+/* Carousel */
+
+.container-carousel {
+  max-width: 500px;
+  margin: 0 auto;
+
+}
+>>>>>>> 024a1112bd194f4697335160b440508dea375eaf

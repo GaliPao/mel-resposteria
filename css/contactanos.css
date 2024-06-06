@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     margin: 0;
     padding: 0;
@@ -53,3 +54,49 @@
 @media only screen and (max-width:600px){
     .container{
         width: 100%;}
+=======
+.mensaje-exito {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  color: #fefefd;
+  font-size: 1.5rem;
+  font-weight: 400;
+  background-color: #d9a796;
+  top: 40vh;
+}
+
+.btn-exito {
+  border-radius: 100px;
+  padding: 3px;
+  background-color: #eed8ff;
+}
+
+.btn-exito:hover {
+  background-color: #dbd8ff;
+}
+
+.form-control {
+  border: 1px solid #ccc;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* .form-control:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.form-control:required {
+  border-color: #dc3545;
+}
+
+.form-control:required:focus {
+  border-color: #dc3545;
+}
+
+/* Optional: Style placeholder text */
+>>>>>>> 024a1112bd194f4697335160b440508dea375eaf
