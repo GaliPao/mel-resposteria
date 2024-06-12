@@ -13,6 +13,8 @@
   overflow: hidden;
   width: 230px;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -45,6 +47,7 @@
   margin: 5px auto 5px;
   width: 100%;
   text-align: justify;
+  flex-grow: 1;
 }
 
 .card-img {
@@ -371,5 +374,64 @@ a:hover {
 .container-carousel {
   max-width: 500px;
   margin: 0 auto;
+
+}
+ /* Cursos  */
+ 
+
+/* Estilo para el título principal */
+h5.card-title {
+  color: #D84A40;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-align: left;
+  font-size: 55px;
+  margin-bottom: 20px;
+  
+}
+
+/* Estilo para el texto en Curso */
+.texto {
+  font-family: 'Comic Neue', cursive;
+  font-size: 20px;
+  text-align: justify;
+}
+
+/* Estilo para los subtítulos */
+.subtitulo {
+  font-family: 'Comic Neue', cursive;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.card-icon {
+  width: 25px;
+  padding-right: 10px;
+  
+}
+
+.img-curso{
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(229, 0, 0, 0.5);
+  color: rgb(0, 0, 0);
+  height: 500px; 
+  position: relative;
+  margin-left: 30px;
+}
+.container{
+  margin-bottom: 100px; 
+}
+.btn {
+width: 50%; 
+height: auto; 
+color: white; 
+background-color: #DD7979;
+
+}
+
+.btn:hover {
+background-color: #DD7979;
 
 }
