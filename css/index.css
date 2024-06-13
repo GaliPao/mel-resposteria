@@ -1,0 +1,28 @@
+.body_index {
+    font-family: "Montserrat";
+}
+
+.titulos {
+    margin-top: 20px;
+    color: #3A3A3A;
+}
+
+.pregunta {
+    color: #000000;
+}
+
+.btn {
+    background: linear-gradient(to bottom, #D84A40, #FF7878);
+    border: none;
+    color: #544444;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1rem;
+    margin-top: 20px;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+}
+.btn:hover {
+    background: linear-gradient(to bottom, #E55B50, #FF9A9A);
+}

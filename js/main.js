@@ -1,49 +1,49 @@
-const mensaje = document.createElement("div");
-const containerForm = document.querySelector(".container");
-const footer = document.querySelector(".footer");
-const name = document.querySelector(".name");
+// const mensaje = document.createElement("div");
+// const containerForm = document.querySelector(".container");
+// const footer = document.querySelector(".footer");
+// const name = document.querySelector(".name");
 //
-(function () {
-  // Public key en https://dashboard.emailjs.com/admin/account
-  emailjs.init({
-    publicKey: "nj_TNtUcAUozOvRJe",
-  });
-})(); // Inicializando servicio de emailjs
+// (function () {
+//   // Public key en https://dashboard.emailjs.com/admin/account
+//   emailjs.init({
+//     publicKey: "nj_TNtUcAUozOvRJe",
+//   });
+// })(); // Inicializando servicio de emailjs
 
-window.onload = function () {
-  document
-    .getElementById("contact-form") // Nombre de la form
-    .addEventListener("submit", function (event) {
-      event.preventDefault();
+// window.onload = function () {
+//   document
+//     .getElementById("contact-form") // Nombre de la form
+//     .addEventListener("submit", function (event) {
+//       event.preventDefault();
 
-      emailjs.sendForm("service_m32z9s6", "contact_form", this).then(
-        () => {
-          console.log("SUCCESS!");
-          mensaje.classList.add("mensaje-exito");
+//       emailjs.sendForm("service_m32z9s6", "contact_form", this).then(
+//         () => {
+//           console.log("SUCCESS!");
+//           mensaje.classList.add("mensaje-exito");
 
-          mensaje.innerHTML = `
-          <div class="mensaje-exito">
-          <h2>Gracias 🎉 ${this.name.value}</h2>
-          <p>Hemos recibido tu mensaje, responderemos pronto 🍪.</p>
-          <button class="btn-exito btn-cierre">De acuerdo!</button>
-         </div>`; // mensaje que aparece cuando se mande el form por correo
-          footer.insertAdjacentElement("beforebegin", mensaje);
+//           mensaje.innerHTML = `
+//           <div class="mensaje-exito">
+//           <h2>Gracias 🎉 ${this.name.value}</h2>
+//           <p>Hemos recibido tu mensaje, responderemos pronto 🍪.</p>
+//           <button class="btn-exito btn-cierre">De acuerdo!</button>
+//          </div>`; // mensaje que aparece cuando se mande el form por correo
+//           footer.insertAdjacentElement("beforebegin", mensaje);
 
-          // Boton de cierre
-          document
-            .querySelector(".btn-cierre")
-            .addEventListener("click", function () {
-              mensaje.remove();
-            });
-        },
-        (error) => {
-          console.log("FAILED...", error);
-        }
-      );
-    });
-};
+//           // Boton de cierre
+//           document
+//             .querySelector(".btn-cierre")
+//             .addEventListener("click", function () {
+//               mensaje.remove();
+//             });
+//         },
+//         (error) => {
+//           console.log("FAILED...", error);
+//         }
+//       );
+//     });
+// };
 
-btnEnviar.addEventListener("submit", validarForm); //no se llama a la funcion con parentesis
+// btnEnviar.addEventListener("submit", validarForm); //no se llama a la funcion con parentesis
 
 //variables expresiones regulares formulario
 // const nombreTest = /^[a-zA-Z\u00C0-\u017F\s]{3,70}$/;
