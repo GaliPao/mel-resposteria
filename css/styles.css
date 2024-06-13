@@ -101,6 +101,14 @@
   filter: drop-shadow(5px -4px 10px rgba(0, 0, 0, 0.604));
 }
 
+h4{
+  color: black;
+  font-size: xx-large;
+  font-weight: 1000;
+  
+}
+
+
 .card .imagen_Eduardo:hover {
   transform: translate(0px);
   transition: 300ms;
@@ -348,7 +356,7 @@ a:hover {
   text-decoration: underline;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
  
   .barra {
     flex-direction: column;
@@ -372,8 +380,85 @@ a:hover {
 /* Carousel */
 
 .container-carousel {
-  max-width: 500px; 
+  max-width: 500px;
   margin: 0 auto;
-    
+
 }
+ /* Cursos  */
+ 
+
+/* Estilo para el título principal */
+h5.card-title {
+  color: #D84A40;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-align: left;
+  font-size: 55px;
+  margin-bottom: 20px;
+  
+}
+
+/* Estilo para el texto en Curso */
+.texto {
+  font-family: 'Comic Neue', cursive;
+  font-size: 20px;
+  text-align: justify;
+}
+
+/* Estilo para los subtítulos */
+.subtitulo {
+  font-family: 'Comic Neue', cursive;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.card-icon {
+  width: 30%;
+  padding-right: 10px;
+  
+}
+
+.img-curso{
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(229, 0, 0, 0.5);
+  color: rgb(0, 0, 0);
+  height: 500px; 
+  position: relative;
+  margin-left: 30px;
+}
+.container{
+  margin-bottom: 100px; 
+}
+.btn {
+width: 50%; 
+height: auto; 
+color: white; 
+background-color: #DD7979;
+
+}
+
+.btn:hover {
+background-color: #DD7979;
+
+}
+
+/**LO SIGUIENTE ES PARA ANCLAR EL FOOTER HSTA LA PARTE DE ABAJO DE LA PAGINA */
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Divide la página en tres filas: auto, 1fr (fraccionada) y auto */
+  min-height: 100vh; /* Establece el alto mínimo del cuerpo para ocupar al menos toda la altura de la ventana */
+}
+/* Estilo para las card de productos  */
+
+#list-items{
+  display: flex;
+  flex-flow: wrap;
+  justify-content:center;
+  
+}
+
 

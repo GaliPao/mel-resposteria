@@ -1,74 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link href="./style.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
 
-    <title>Contact Form</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
-    <script src="js/sections.js" defer></script>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Link y referencia  a Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <!-- Iconos de bootstrap-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+  <!-- Preconexion con fuentes para  eficientar tiempos-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <!--Uso de fuentes externas de googleapis para estilos de letra  "Comic Neue"-->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet" />
 
-  <style>
-    #list-items,  #etiquetas-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); /* Define el ancho de las columnas */
-    gap: 20px; /* Define el espacio entre las tarjetas */
-}
-  </style>
+  <title>Pagina_Productos</title>
+  <!-- Conexion arhivos  CSS y JS  -->
+  <script src="js/products.js" defer></script>
+  <link rel="stylesheet" href="css/products.css">
+  <!-- Js para agregar seccion de header y footer-->
+  <script src="js/sections.js" defer></script>
+</head>
 
-  <body>
-    <header
-      id="navbar-example2"
-      class="navbar custom-bg-rosa px-3 mb-3 custom-bg-red"
-    ></header>
-    <!--Cursos-->
-    <!-- Aquí se agrega el contenedor para los cursos -->
-    <h5 id="titulo-pagina" style="font-size: 36px; font-weight:
+<body>
+  <!--Header  con id y caracteristicas como navbar, color de fondo -->
+  <header id="navbar-example2" class="navbar custom-bg-rosa px-3 mb-3 custom-bg-red"></header>
+  <!-- Aquí se agrega el contenedor para los cursos -->
+  <h5 id="titulo-pagina" style="font-size: 36px; font-weight:
       bold; font-family: 'Montserrat', sans-serif; 
       color: #D84A40; text-align: center;">Cursos</h5>
-    <div class="container mt-5">
-      <div class="row row-cols-2" id="list-items"></div> 
-      <link rel="stylesheet" href="css/productos.css" />
-        <script src="js/products.js" defer></script>
- </div>
+  <div class="container mt-5">
+    <div class="row row-cols-2" id="list-items"></div>
+  </div>
   <!--etiquetas-->
- <h5 id="titulo-pagina" style="font-size: 36px; 
+  <h5 id="titulo-pagina" style="font-size: 36px; 
  font-weight: bold; font-family: 'Montserrat',
   sans-serif; color: #D84A40; text-align: center;">Cookie cards y Etiquetas</h5>
- <div class="container mt-5">
-   <div class="row row-cols-2" id="etiquetas-items"></div> 
- </div>
-    <!--Footer-->
-    <footer id="footer"></footer>
-    <script src="./js/main2.js"></script>
-    <script src="./js/main.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <div class="container mt-5 mb-3">
+    <div class="row row-cols-2" id="etiquetas-items"></div>
+  </div>
+  <!--Footer-->
+  <footer id="footer"></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

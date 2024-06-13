@@ -2,14 +2,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const nav = document.querySelector("#navbar-example2");
   const footer = document.querySelector("#footer");
 
-  nav.insertAdjacentHTML(
+/* INSERCION DE LA SECCION HEADER  MEDIANTE  COIGO JS Y LA FUNCION insertAdjacentHTML */ 
+
+nav.insertAdjacentHTML(
     "beforeend",
     `<div style="display: flex; align-items: center; margin: 0; padding: 0">
-<a href="./index.html" style="display: inline-block">
+<a href="acerca.html" style="display: inline-block">
   <img
     src="./src/fotos-team/logo.png"
     alt="Logo de Mel Repostería"
-    width="50"
+    width="100px"
     style="border-radius: 50%; margin-right: 20px"
   />
 </a>
@@ -37,33 +39,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <ul class="dropdown-menu">
     <li>
-      <a class="dropdown-item" href="#scrollspyHeading3">Inicio</a>
+      <a class="dropdown-item" href="acerca.html">Acerca de nosotros</a>
     </li>
     <li>
       <hr class="dropdown-divider" />
     </li>
     <li>
-      <a class="dropdown-item" href="#scrollspyHeading5">Login</a>
+      <a class="dropdown-item" href="contactanos.html" >Contactanos</a>
     </li>
     <li>
       <hr class="dropdown-divider" />
     </li>
     <li>
-      <a class="dropdown-item" href="#scrollspyHeading5">Carrito</a>
+      <a class="dropdown-item" href="productos.html" >Productos </a>
     </li>
     <li>
       <hr class="dropdown-divider" />
     </li>
     <li>
-      <a class="dropdown-item" href="#scrollspyHeading5"
-        >Contactanos</a
-      >
+      <a class="dropdown-item" href="curso1.html" >Curso 1</a>
     </li>
   </ul>
 </li>
 </ul>`
   );
 
+
+/* INSERCION DE LA SECCION FOOTER  MEDIANTE  COIGO JS Y LA FUNCION insertAdjacentHTML */ 
   footer.insertAdjacentHTML(
     "beforeend",
     `
