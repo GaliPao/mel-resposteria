@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const productsList = document.getElementById("productsList"); // Asegúrate de tener este elemento en tu HTML
 
     let isValid = true;
-    let datosProducto = new Array;
+    let datosProducto = new Array ();
 
     // Función para Cloudinary
     let widget_cloudinary = cloudinary.createUploadWidget({
@@ -44,13 +44,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Borra datos de validaciones
         alertValidacionesTexto.innerHTML = "";
-        alertaValidaciones.style.display = "none";
+        alertaValidaciones.classList.add("d-none");
         isValid = true;
 
         // Validaciones con expresiones regulares
-        const nameValidation = /^[a-zA-Z\s]{3,30}$/;
-        const descriptionValidation = /^[a-zA-Z\s]{10,200}$/;
-        const priceValidation = /^\d+(\.\d{1,2})?$/;
+        const nameValidation = /^[a-zA-ZÀ-ÿ\s]{3,30}$/;
+        const descriptionValidation = /^[a-zA-ZÀ-ÿ\s]{10,200}$/;
+        const priceValidation = /^(0|[1-9]\d*)(\.\d{1,2})?$/;
 
         let mensajes = [];
 
@@ -64,8 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
             isValid = false;
         }
 
-        if (!priceValidation.test(productPrice)) {
-            mensajes.push("El precio ingresado no es correcto, solo números.");
+        if (!priceValidation.test(productPrice)|| parseFloat(productPrice) < 0)  {
+            mensajes.push("El precio ingresado no es correcto, solo números con hasta dos decimales.");
             isValid = false;
         }
 
@@ -77,12 +77,13 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!isValid) {
             alertaValidaciones.classList.remove("d-none");
             alertValidacionesTexto.innerHTML = mensajes.join("<br>");
-            return;
+          return;
         } else {
             alertaValidaciones.classList.add("d-none");
 
             // Crear el producto
-            let producto = {        
+            let producto = {   
+                id: Date.now(), //brinda un id unico
                 title: productName,
                 description: productDescription,
                 price: productPrice, 
@@ -101,6 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
             productPhoto.src = "";
         }
     });
+    //Se agrega a la función el data-id
 
     function createCards(products) {
         console.log(products.length);
@@ -108,18 +110,38 @@ document.addEventListener("DOMContentLoaded", () => {
         products.forEach(p => {
             console.log(p.id, p.title, p. description, p.price, p.image);
             productsList.insertAdjacentHTML("beforeend",
-                `<div class="card" style="width: 18rem;">
+                `<div class="card" style="width: 18rem;" data-id="${p.id}"> 
                 <img src=${p.image} class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">${p.title}</h5>
                   <p class="card-text">${p.description}</p>
                   <p class="card-text">${p.price}</p>                  
-                  <a href="#" class="btn btn-primary">Borra producto</a>
+                  <a href="#" class="btn btn-primary btn-delete">Borra producto</a>
                 </div>
               </div>`
-            );
+            ); //beforeend
+        });//forEach
+        
+        // Agregar eventos de clic a los botones de borrar
+        const deleteButtons = document.querySelectorAll(".btn-delete");
+        deleteButtons.forEach(button => {
+            button.addEventListener("click", (e) => {
+                e.preventDefault();
+                const card = button.closest(".card");
+                const productId = card.getAttribute("data-id");
+                deleteProduct(productId);
+            });
         });
-    }
+
+        function deleteProduct(id) {
+        // Filtrar los productos para eliminar el producto con el id proporcionado
+        datosProducto = datosProducto.filter(product => product.id != id);
+        // Volver a crear las tarjetas de producto
+        createCards(datosProducto);
+        }
+    }//function createCards
+    
 });
+
 
 
