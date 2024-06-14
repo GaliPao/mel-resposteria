@@ -1,0 +1,82 @@
+#navbar-example2 {
+  background-color: #ffdad8;
+  /* Color rosa claro en hexadecimal */
+}
+
+/* Ajustar el tamaño del botón desplegable */
+.nav-link.dropdown-toggle.badge.custom-btn-color1 {
+  font-size: 1rem; /* Ajusta el tamaño del texto */
+  padding: 10px 20px;
+}
+
+.nav-link.dropdown-toggle.badge.custom-btn-color1 span {
+  font-size: 1rem; /* Ajusta el tamaño del texto del span */
+}
+
+.custom-btn-color1 {
+  background-color: #ff1493;
+  /* Color rosa intenso en hexadecimal */
+}
+
+.custom-btn-color1 span {
+  width: 50px;
+  height: auto;
+}
+
+.footer-logo img {
+  max-width: 100px;
+  height: auto;
+  align-self: flex-start;
+}
+
+.seccion {
+  flex: 1;
+  margin: 10px;
+  text-align: center;
+}
+.barra {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+}
+
+.navegacion {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.a {
+  color: #ff9183;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 650;
+}
+
+.a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .barra {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navegacion {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-seccion {
+    margin: 10px 0;
+  }
+}
+

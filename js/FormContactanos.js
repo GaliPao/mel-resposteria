@@ -1,3 +1,6 @@
+// Part 1: EmailJS initialization and form submission
+
+/*
 (function () {
   // Public key en https://dashboard.emailjs.com/admin/account
   emailjs.init({
@@ -11,7 +14,8 @@ window.onload = function () {
     .addEventListener("submit", validarForm);
 };
 
-// 
+*/
+// Part 2: Form validation
 
 // Form inputs
 const nombre = document.getElementById("name");
@@ -23,89 +27,65 @@ let btnEnviar = document.getElementById("btnEnviar");
 // Regular expressions for validation
 let nombreTest = /^[a-zA-Z\u00C0-\u017F\s]{3,70}$/;
 let emailTest = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{2,}$/;
-let numeroTest = /^[1-9][0-9]{9}$/;
+let numeroTest = /^52[0-9]{8}$/;
 let mensajeTest = /^[a-zA-Z\u00C0-\u017F\s]{2,}$/;
 
 // Function to style valid input
 function valido(elem) {
   elem.classList.remove("is-invalid");
   elem.classList.add("is-valid");
-  document.getElementById(`error-${elem.id}`).innerHTML = "";
 }
 
 // Function to style invalid input
-function invalido(elem, mensaje) {
+function invalido(elem) {
   elem.value = "";
   elem.classList.add("is-invalid");
   elem.classList.remove("is-valid");
-  document.getElementById(`error-${elem.id}`).innerHTML = mensaje;
-}
-
-// Function to show success message
-function mostrarMensajeExito(nombre) {
-  const confirmacion = document.createElement("div");
-  confirmacion.classList.add("mensaje-exito");
-  confirmacion.innerHTML = `
-    <div class="mensaje-exito">
-      <h2>Gracias 🎉 ${nombre}</h2>
-      <p>Hemos recibido tu mensaje, responderemos pronto 🍪</p>
-      <button class="btn-exito btn-cierre">Ok</button>
-    </div>`;
-
-  const containerForm = document.querySelector("#container");
-  containerForm.insertAdjacentElement("afterend", confirmacion);
-
-  // Boton de cierre
-  document.querySelector(".btn-cierre").addEventListener("click", function () {
-    confirmacion.remove();
-  });
-
-  // Remove message after a few seconds
-  setTimeout(() => {
-    confirmacion.remove();
-  }, 5000);
 }
 
 // Form validation function
 function validarForm(event) {
   event.preventDefault();
 
-  let mensajeError = false;
+  let mensaje = "";
 
   // Validate nombre
   if (!nombreTest.test(nombre.value.trim())) {
-    invalido(nombre, "Llenar el campo de nombre correctamente");
-    mensajeError = true;
+    mensaje += "Llenar el campo de nombre correctamente \n";
+    invalido(nombre);
   } else {
     valido(nombre);
   }
 
   // Validate email
   if (!emailTest.test(email.value.trim())) {
-    invalido(email, "Llenar el campo de correo correctamente<br>Por ejemplo: correo123@gmail.com");
-    mensajeError = true;
+    mensaje +=
+      "Llenar el campo de correo correctamente \nPor ejemplo: correo123@gmail.com \n";
+    invalido(email);
   } else {
     valido(email);
   }
 
   // Validate telefono
   if (!numeroTest.test(telefono.value.trim())) {
-    invalido(telefono, "Llenar el campo de telefono correctamente");
-    mensajeError = true;
+    mensaje += "Llenar el campo de telefono correctamente \n";
+    invalido(telefono);
   } else {
     valido(telefono);
   }
 
   // Validate message
   if (!mensajeTest.test(message.value.trim())) {
-    invalido(message, "El campo de mensaje está vacío");
-    mensajeError = true;
+    mensaje += "El campo de mensaje está vacío \n";
+    invalido(message);
   } else {
     valido(message);
   }
 
   // Check if there are validation messages
-  if (!mensajeError) {
+  if (mensaje.length > 0) {
+    alert(mensaje);
+  } else {
     // If validation is successful, send the email
     emailjs
       .sendForm(
@@ -116,7 +96,24 @@ function validarForm(event) {
       .then(
         () => {
           console.log("SUCCESS!");
-          mostrarMensajeExito(nombre.value);
+          const confirmacion = document.createElement("div");
+          confirmacion.classList.add("mensaje-exito");
+          confirmacion.innerHTML = `
+        <div class="mensaje-exito">
+          <h2>Gracias 🎉 ${nombre.value}</h2>
+          <p>Hemos recibido tu mensaje, responderemos pronto 🍪</p>
+          <button class="btn-exito btn-cierre">Ok</button>
+        </div>`; // mensaje que aparece cuando se mande el form por correo
+
+          const containerForm = document.querySelector("#container");
+          containerForm.insertAdjacentElement("afterend", confirmacion);
+
+          // Boton de cierre
+          document
+            .querySelector(".btn-cierre")
+            .addEventListener("click", function () {
+              confirmacion.remove();
+            });
 
           // Reset form fields
           nombre.value = "";

@@ -10,14 +10,20 @@
   top: 40vh;
 }
 
-.btn-exito {
+.mensaje-error {
+  color: #ff2e73;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.btn-exito, .btn-error {
   border-radius: 10px;
   width: 50px;
   padding: 3px;
   background-color: #eed8ff;
 }
 
-.btn-exito:hover {
+.btn-exito:hover, .btn-error:hover {
   background-color: #dbd8ff;
 }
 
@@ -29,10 +35,14 @@
   transition: border-color 0.3s ease-in-out;
 }
 
-.isInvalid {
+.is-invalid {
   border: 1px solid red;
 }
 
-.isValid {
+.is-valid {
   background-color: green;
 }
+
+/* 
+
+*/  
