@@ -73,42 +73,45 @@ nav.insertAdjacentHTML(
     "beforeend",
     `
   <div class="barra">
-        <a class="logo" href="#">
+        <a class="footer-logo" href="#">
           <img src="./src/fotos-team/logo.png" alt="logo mel reposteria" />
         </a>
   
         <nav class="navegacion">
-          <div class="seccion conocenos">
+          <div class="footer-seccion conocenos">
             <h3>Conócenos</h3>
-            <a href="./acerca.html">Acerca de nosotros</a>
+            <a class="footer-a" href="./acerca.html">Acerca de nosotros</a>
           </div>
   
-          <div class="seccion redes-sociales">
+          <div class="footer-seccion redes-sociales">
             <h3>Redes sociales</h3>
-            <a href="https://www.instagram.com/melreposteriamx/">Instagram</a>
-            <a href="https://www.facebook.com/profile.php?id=100067550652660">Facebook</a>
+            <a class="footer-a" href="https://www.instagram.com/melreposteriamx/">Instagram</a>
+            <a class="footer-a" href="https://www.facebook.com/profile.php?id=100067550652660">Facebook</a>
           </div>
   
-          <div class="seccion cursos">
+          <div class="footer-seccion cursos">
             <h3>Cursos</h3>
+
             <a href="./productos.html">Cursos</a>
           </div>
   
-          <div class="seccion contacto">
+          <div class="footer-seccion contacto">
             <h3>Contacto</h3>
-            <a href="./contactanos.html"> Contáctanos</a>
-            <a href="./contactanos.html">Cotizaciones</a>
+            <a class="footer-a" href="./contactanos.html"> Contáctanos</a>
+            <a class="footer-a" href="./contactanos.html">Cotizaciones</a>
           </div>
   
-          <div class="seccion mi-cuenta">
+          <div class="footer-seccion mi-cuenta">
             <h3>Mi cuenta</h3>
-            <a href="./iniciosesion.html">Iniciar sesión</a>
-            <a href="./iniciosesion.html">Registrarse</a>
+
+            <a class="footer-a" href="./iniciosesion.html">Iniciar sesión</a>
+            <a class="footer-a" href="./iniciosesion.html">Registrarse</a>
+
           </div>
   
-          <div class="seccion ubicacion">
+          <div class="footer-seccion ubicacion">
             <h3>Ubicación</h3>
-            <a href="#">Pachuca</a>
+            <a class="footer-a" href="#">Pachuca</a>
           </div>
         </nav>
       </div>
