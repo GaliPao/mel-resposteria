@@ -34,10 +34,13 @@ nav.insertAdjacentHTML(
     role="button"
     aria-expanded="false"
   >
-    <span class="badge custom-btn-color1">Menu</span>
+    <span class="badge custom-btn-color1">Menú</span>
   </a>
 
   <ul class="dropdown-menu">
+    <li>
+      <a class="dropdown-item" href="./index.html">Inicio</a>
+    </li>
     <li>
       <a class="dropdown-item" href="acerca.html">Acerca de nosotros</a>
     </li>
@@ -45,7 +48,7 @@ nav.insertAdjacentHTML(
       <hr class="dropdown-divider" />
     </li>
     <li>
-      <a class="dropdown-item" href="contactanos.html" >Contactanos</a>
+      <a class="dropdown-item" href="contactanos.html" >Contáctanos</a>
     </li>
     <li>
       <hr class="dropdown-divider" />
@@ -57,7 +60,7 @@ nav.insertAdjacentHTML(
       <hr class="dropdown-divider" />
     </li>
     <li>
-      <a class="dropdown-item" href="curso1.html" >Curso 1</a>
+      <a class="dropdown-item" href="curso1.html" >Cursos</a>
     </li>
   </ul>
 </li>
@@ -88,7 +91,7 @@ nav.insertAdjacentHTML(
   
           <div class="seccion cursos">
             <h3>Cursos</h3>
-            <a href="#">Decoración de flores</a>
+            <a href="./productos.html">Cursos</a>
           </div>
   
           <div class="seccion contacto">
@@ -99,8 +102,8 @@ nav.insertAdjacentHTML(
   
           <div class="seccion mi-cuenta">
             <h3>Mi cuenta</h3>
-            <a href="#">Iniciar sesión</a>
-            <a href="#">Registrarse</a>
+            <a href="./iniciosesion.html">Iniciar sesión</a>
+            <a href="./iniciosesion.html">Registrarse</a>
           </div>
   
           <div class="seccion ubicacion">
