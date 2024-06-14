@@ -102,6 +102,14 @@
   filter: drop-shadow(5px -4px 10px rgba(0, 0, 0, 0.604));
 }
 
+h4{
+  color: black;
+  font-size: xx-large;
+  font-weight: 1000;
+  
+}
+
+
 .card .imagen_Eduardo:hover {
   transform: translate(0px);
   transition: 300ms;
@@ -300,7 +308,9 @@ h3 {
   color: #ff2e73;
 }
 
+
 @media (max-width: 768px) {
+
   .barra {
     flex-direction: column;
     text-align: center;
@@ -323,4 +333,24 @@ h3 {
 .container-carousel {
   max-width: 500px;
   margin: 0 auto;
+
 }
+
+/**LO SIGUIENTE ES PARA ANCLAR EL FOOTER HSTA LA PARTE DE ABAJO DE LA PAGINA */
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Divide la página en tres filas: auto, 1fr (fraccionada) y auto */
+  min-height: 100vh; /* Establece el alto mínimo del cuerpo para ocupar al menos toda la altura de la ventana */
+}
+/* Estilo para las card de productos  */
+
+#list-items{
+  display: flex;
+  flex-flow: wrap;
+  justify-content:center;
+  
+}
+
+

@@ -1,0 +1,165 @@
+/* Fuente Comic Neu y Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+/* Estilo general */
+body {
+    font-family: 'Comic Neue', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 600px;
+    margin: auto;
+    background-color: #ffeed8 ;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Título del formulario */
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+/* Estilos para el formulario */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para los grupos de formulario */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Estilos para las etiquetas */
+.form-group label {
+    font-weight: bold;
+    color: #555555;
+}
+
+/* Estilos para los campos de entrada */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333333;
+    box-sizing: border-box;
+}
+
+/*Oculta la validación mientras no haya errores*/
+.d-none {
+    display: none !important;
+}
+
+/* Estilos para los botones */
+.btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Botón agregar foto */
+.btn-primary {
+    background: linear-gradient(to bottom, #D84A40, #FF7878);
+    color: #544444;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to bottom, #E55B50, #FF9A9A)
+}
+
+/* Botón eliminar foto */
+.btn-danger {
+    background-color: #ff9183;
+    color: #544444;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Botón agregar producto */
+.btn-success {
+    background-color: #97BE5A;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #28a745;
+}
+
+/* Estilos para la imagen del producto */
+#productPhoto {
+    display: block;
+    max-width: 10%;
+    height: auto;
+    margin-top: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+/* Estilos para la alerta */
+.alert {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.alert-danger .bi {
+    margin-right: 10px;
+}
+.alert-danger .alert-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.alert-danger .bi {
+    color: #721c24;
+}
+
+#alertaValidaciones p {
+    margin: 0;
+}
+
+/* Estilos para la lista de productos */
+#productsList {
+    margin-top: 20px;
+}
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .form-group img {
+        width: 100%;
+    }
+}
