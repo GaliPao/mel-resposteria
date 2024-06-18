@@ -101,3 +101,4 @@
 //     //reseteamos y borramos todo
 //   }
 // }
+//agregar evento para cargar el contenido del JSON

@@ -1,5 +1,30 @@
-function recortar(item) {
+// Función para cargar productos desde el localStorage
+function loadProductsFromLocalStorage() {
+    let storedProducts = JSON.parse(localStorage.getItem('productos')) || [];
+    storedProducts.forEach(product => {
+        addProductItem(product);
+    });
+}
 
+// Función para agregar un producto al HTML
+function addProductItem(product) {
+    const itemHTML = `
+        <div class="card mb-4" data-id="${product.id}">
+            <img src="${product.image}" class="card-img-top" alt="image">
+            <div class="card-body">
+                <h5 class="card-title">${product.title}</h5>
+                <p class="card-text">${product.description}</p>
+                <p style="font: bold; color: black;">$${product.price}</p>  
+                <a href="#" class="btn btn-primary btn-delete">Borrar producto</a>  
+            </div>
+        </div>
+    `;
+    const itemsContainer = document.getElementById("list-items");
+    itemsContainer.innerHTML += itemHTML;
+}
+
+//Función para recortar la descripción de los productos y las etiquetas a máximo 50 palabras
+function recortar(item) {
     let  maxPalabras= 50;
     let array="";
     if (item.description.length > maxPalabras) {
@@ -13,6 +38,7 @@ function recortar(item) {
     }
 }
 
+//Función para agregar los cursos al HTML
 function addItem(item) {
     recortar(item);
     const itemHTML = `
@@ -29,7 +55,7 @@ function addItem(item) {
     const itemsContainer = document.getElementById("list-items");
     itemsContainer.innerHTML += itemHTML;
 }
-
+//función para agregar las etiquetas al HTML
 function addEtiquetaItem(item) {
     recortar(item);
     const itemHTML = `
@@ -45,8 +71,6 @@ function addEtiquetaItem(item) {
     `;
     const etiquetasContainer = document.getElementById("etiquetas-items");
     etiquetasContainer.innerHTML += itemHTML;
-    etiquetasContainer
-
 }
 
 // Lista de productos
@@ -72,9 +96,24 @@ const etiquetas = [
 window.onload = function () {
     products.forEach(addItem);
     etiquetas.forEach(addEtiquetaItem);
+    loadProductsFromLocalStorage();
+}; //cargar los productos desde localStorage
 
+// Evento para borrar productos en productos.html
+document.addEventListener("click", function(e) {
+    if (e.target && e.target.classList.contains("btn-delete")) {
+        e.preventDefault();
+        const card = e.target.closest(".card");
+        const productId = card.getAttribute("data-id");
+        deleteProduct(productId);
+    }
+});
 
-    
-};
-
+function deleteProduct(id) {
+    let storedProducts = JSON.parse(localStorage.getItem('productos')) || [];
+    storedProducts = storedProducts.filter(product => product.id != id);
+    localStorage.setItem('productos', JSON.stringify(storedProducts));
+    // Recargar la lista de productos
+    loadProductsFromLocalStorage();
+}
 
