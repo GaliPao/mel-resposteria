@@ -1,4 +1,4 @@
-#navbar {
+#navbar-example2 {
   background-color: #ffdad8;
   /* Color rosa claro en hexadecimal */
 }
@@ -29,12 +29,12 @@
   align-self: flex-start;
 }
 
-.footer-seccion {
+.seccion {
   flex: 1;
   margin: 10px;
   text-align: center;
 }
-.footer-barra {
+.barra {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -43,7 +43,7 @@
   background-color: white;
 }
 
-.footer-navegacion {
+.navegacion {
   display: flex;
   flex-wrap: wrap;
   flex: 1;
@@ -52,7 +52,7 @@
   width: 100%;
 }
 
-.footer-a {
+.a {
   color: #ff9183;
   text-decoration: none;
   display: block;
@@ -60,7 +60,7 @@
   font-weight: 650;
 }
 
-.footer-a:hover {
+.a:hover {
   text-decoration: underline;
 }
 
