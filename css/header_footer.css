@@ -1,21 +1,21 @@
-#navbar {
+/* #navbar-example2 {
   background-color: #ffdad8;
-  /* Color rosa claro en hexadecimal */
+  /* Color rosa claro en hexadecimal 
 }
 
 /* Ajustar el tamaño del botón desplegable */
-.nav-link.dropdown-toggle.badge.custom-btn-color1 {
-  font-size: 1rem; /* Ajusta el tamaño del texto */
+/* .nav-link.dropdown-toggle.badge.custom-btn-color1 {
+  font-size: 1rem; /* Ajusta el tamaño del texto 
   padding: 10px 20px;
-}
+} 
 
 .nav-link.dropdown-toggle.badge.custom-btn-color1 span {
-  font-size: 1rem; /* Ajusta el tamaño del texto del span */
+  font-size: 1rem; /* Ajusta el tamaño del texto del span 
 }
 
 .custom-btn-color1 {
   background-color: #ff1493;
-  /* Color rosa intenso en hexadecimal */
+  /* Color rosa intenso en hexadecimal 
 }
 
 .custom-btn-color1 span {
@@ -29,12 +29,12 @@
   align-self: flex-start;
 }
 
-.footer-seccion {
+.seccion {
   flex: 1;
   margin: 10px;
   text-align: center;
 }
-.footer-barra {
+.barra {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -43,7 +43,7 @@
   background-color: white;
 }
 
-.footer-navegacion {
+.navegacion {
   display: flex;
   flex-wrap: wrap;
   flex: 1;
@@ -52,7 +52,7 @@
   width: 100%;
 }
 
-.footer-a {
+.a {
   color: #ff9183;
   text-decoration: none;
   display: block;
@@ -60,7 +60,7 @@
   font-weight: 650;
 }
 
-.footer-a:hover {
+.a:hover {
   text-decoration: underline;
 }
 
@@ -78,4 +78,65 @@
   .footer-seccion {
     margin: 10px 0;
   }
+} */
+
+.navbar {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-brand {
+  border-radius: 50%;
+  margin-right: 20px;
+  
+}
+.navbar-header{
+  margin-top: 100px;
+
+}
+.container-fluid {
+  background-color: #ffdad8;
+}
+
+.container {
+  font-family: "Comic Neue";
+}
+
+.logo {
+  width: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+  padding-left: 20px;
+}
+
+/* #p {
+  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+} */
+
+body {
+  margin-top: 150px;
+}
+
+.navbar-nav .nav-link {
+  margin-right: 10px;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+}
+
+.navbar-icons .nav-item {
+  padding-left: 10px;
+
+}
+
+.navbar-icons .nav-link img {
+  width: 24px;
+  height: 24px;
 }
