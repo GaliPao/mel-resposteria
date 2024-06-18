@@ -257,7 +257,7 @@ header {
 }
 
 .custom-bg-rosa {
-  background-color: #ffdad8;
+  background-color: hsl(3, 100%, 92%);
   /* Color rosa claro en hexadecimal */
 }
 
@@ -277,19 +277,18 @@ header {
 
 .barra {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items:center;
   width: 100%;
-  background-color: white;
+  background-color: hsla(3, 100%, 92%, 0.412);
 }
 
 .navegacion {
   display: flex;
-  flex-wrap: wrap;
-  flex: 1;
-  justify-content: space-around;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items:center;
   width: 100%;
 }
 

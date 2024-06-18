@@ -65,7 +65,7 @@ function validarForm(event) {
 
   // Validate telefono
   if (!numeroTest.test(telefono.value.trim())) {
-    mensaje += "Llenar el campo de telefono correctamente \n";
+    mensaje += "Llenar el campo de teléfono correctamente \n";
     invalido(telefono);
   } else {
     valido(telefono);
@@ -98,7 +98,7 @@ function validarForm(event) {
           confirmacion.innerHTML = `
         <div class="mensaje-exito">
           <h2>Gracias 🎉 ${nombre.value}</h2>
-          <p>Hemos recibido tu mensaje, responderemos pronto 🍪</p>
+          <p>Hemos recibido tu mensaje, responderemos pronto, toma una galleta. 🍪</p>
           <button class="btn-exito btn-cierre">Ok</button>
         </div>`; // mensaje que aparece cuando se mande el form por correo
 

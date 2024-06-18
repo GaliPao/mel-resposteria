@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </li>
     <li>
       <a class="dropdown-item" href="#scrollspyHeading5"
-        >Contactanos</a
+        >Contáctanos</a
       >
     </li>
   </ul>
@@ -68,42 +68,10 @@ document.addEventListener("DOMContentLoaded", function () {
     "beforeend",
     `
   <div class="barra">
-        <a class="footer-logo" href="#">
-          <img src="./src/fotos-team/logo.png" alt="logo mel reposteria" />
-        </a>
-  
         <nav class="navegacion">
-          <div class="footer-seccion conocenos">
-            <h3>Conócenos</h3>
-            <a class="footer-a" href="./acerca.html">Acerca de nosotros</a>
-          </div>
-  
-          <div class="footer-seccion redes-sociales">
-            <h3>Redes sociales</h3>
-            <a class="footer-a" href="https://www.instagram.com/melreposteriamx/">Instagram</a>
-            <a class="footer-a" href="https://www.facebook.com/profile.php?id=100067550652660">Facebook</a>
-          </div>
-  
-          <div class="footer-seccion cursos">
-            <h3>Cursos</h3>
-            <a class="footer-a" href="#">Decoración de flores</a>
-          </div>
-  
-          <div class="footer-seccion contacto">
-            <h3>Contacto</h3>
-            <a class="footer-a" href="./contactanos.html"> Contáctanos</a>
-            <a class="footer-a" href="./contactanos.html">Cotizaciones</a>
-          </div>
-  
-          <div class="footer-seccion mi-cuenta">
-            <h3>Mi cuenta</h3>
-            <a class="footer-a" href="#">Iniciar sesión</a>
-            <a class="footer-a" href="#">Registrarse</a>
-          </div>
-  
           <div class="footer-seccion ubicacion">
             <h3>Ubicación</h3>
-            <a class="footer-a" href="#">Pachuca</a>
+            <a class="footer-a" href="https://maps.app.goo.gl/YbSA9QZUciVZDmW1A">Pachuca</a>
           </div>
         </nav>
       </div>
