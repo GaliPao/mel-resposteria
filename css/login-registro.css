@@ -1,0 +1,19 @@
+
+
+.container-registro {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 70px;
+    flex-wrap: wrap;
+}
+
+.form-container {
+    border: 4px solid #FF2E73;
+    background-color: #ffdad8;
+    border-radius: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 500px;
+    max-width: 100%;
+}
