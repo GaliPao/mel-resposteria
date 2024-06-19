@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 70px;
+    gap: 80px;
     flex-wrap: wrap;
 }
 
@@ -17,3 +17,10 @@
     width: 500px;
     max-width: 100%;
 }
+
+.imagenFondo{
+    background-image: url('https://usagif.com/wp-content/uploads/gif/confetti-18.gif'); 
+    background-size:cover; 
+    background-position: center;
+    width: 100%;
+  }
