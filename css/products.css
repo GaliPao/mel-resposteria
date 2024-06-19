@@ -131,12 +131,19 @@
     text-align: left;
   }
   
+  
   .card-icon {
     width: 25px;
     padding-right: 10px;
     
   }
   
+  .card-info{
+    display: flex;
+    text-align: center;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
  
   .container{
     margin-bottom: 100px; 
@@ -178,7 +185,9 @@
 }
 
 .card-body{
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
@@ -213,6 +222,14 @@
   display: flex;
   flex-flow: wrap;
   justify-content:center;   
+}
+
+.card-info{
+  display: flex;
+  text-align: center;
+  justify-content: flex-end;
+  align-items: flex-end;
+  
 }
 
 body {
