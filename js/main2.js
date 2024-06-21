@@ -141,7 +141,10 @@ function validarForm(event) {
       });
 
     // Reset form fields
-    document.getElementById("contact-form").reset();
+    nombre.value = "";
+    email.value = "";
+    telefono.value = "";
+    message.value = "";
 
     // },
     //   (error) => {
