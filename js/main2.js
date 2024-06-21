@@ -141,12 +141,7 @@ function validarForm(event) {
       });
 
     // Reset form fields
-    nombre.value = "";
-    email.value = "";
-    telefono.value = "";
-    message.value = "";
-
-    // },
+      // },
     //   (error) => {
     //     console.log("FAILED...", error);
     //   };
