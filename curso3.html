@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Link y referencia  a Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <!-- Iconos de bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+    <!-- Preconexion con fuentes para  eficientar tiempos-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <!--Uso de fuentes externas de googleapis para estilos de letra  "Comic Neue"-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet" />
+  
+    <title>Decoración de Catrina </title>
+    <!-- Conexion arhivos  CSS y JS  -->
+    <script src="js/sections.js" defer></script>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
- <link href="./css/styles.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-    rel="stylesheet" />
+    <link rel="stylesheet" href="./css/header_footer.css" />
 
-  <title>Curso decoración Catrina</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script src="js/sections.js" defer></script>
-</head>
+    <!-- CSS para agregar seccion de header y footer-->
+    <link rel="stylesheet" href="./css/header_footer.css" />
+    <link rel="stylesheet" href="css/products.css">
+    <!-- Css para agregar estilo a la pagina-->
 
-<style>
-  #list-items,
-  #etiquetas-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-    gap: 20px;
-   
-  }
-</style>
+    <link rel="stylesheet" href="css/cursos.css">
+  </head>
+
 
 <body>
-  <header id="navbar-example2" class="navbar custom-bg-rosa px-3 mb-3 custom-bg-red"></header>
+  <br><br><br><br><br>
+  <!-- <header id="navbar-example2" class="navbar custom-bg-rosa px-3 mb-3 custom-bg-red"></header> -->
+  <header id="navbar-header"></header>
   <!--Cursos-->
   <div class="container">
      <h5 class="card-title" style="color: #D84A40; font-family: 'Montserrat', sans-serif; text-align:left">Cursos </br> Decoración Catrina técnica volumen </h5> 
@@ -43,7 +45,7 @@
           <li class="list-group-item d-flex justify align-items-start">
             <div class="ms-2 me-auto"> 
               <div class="subtitulo"><img src="/src/Iconos/galleta.ico" class="card-icon" alt="Icono Aprenderás"> Aprenderás:</div>
-             <p class="texto">Diferentes técnicas para elaborar texturas como flores en relieve con duya usando royal icing</p>
+             <p class="texto">Decorar una catrina utilizando la técnica de volumen y transferencia. </p>
             </div>
           </li>
           <li class="list-group-item d-flex justify align-items-start">
@@ -51,9 +53,9 @@
               <div class="subtitulo"><img src="./src/Iconos/horneando.png" class="card-icon" alt="Icono Contenido"> Contenido:</div>
              <p class="texto">
               -Receta de galletas de mantequilla y royal icing </br>
-              -Plantillas de Flores </br>
+              -Plantilla de Catrina </br>
               -Decoración con royal icing y técnicas de volumen </br>
-              -Técnica de Duyado de flores y hojas.</p>
+              -Aplicación de pigmentos y pintura</p>
             </div>
           </li>
           <li class="list-group-item d-flex justify align-items-start">
@@ -63,7 +65,7 @@
               El curso incluye lista de materiales, cada alumno es libre de adquirirlos donde desee.</p> 
             </div>
           </li>
-          <button type="button" class="btn  btn-s">Añadir al carrito</button>
+          <button type="button" class="btn mb-3 mt-3  btn-s" style="position: relative; left: 25%;; bottom: 0;">Añadir al carrito</button>
         </ol> 
       </div>
       <!-- img del curso -->

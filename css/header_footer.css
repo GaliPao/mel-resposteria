@@ -1,16 +1,10 @@
-#navbar-example2 {
+/*Header*/
+ header {
+  font-family: "Comic Neue";
+}
+.custom-bg-rosa {
   background-color: #ffdad8;
   /* Color rosa claro en hexadecimal */
-}
-
-/* Ajustar el tamaño del botón desplegable */
-.nav-link.dropdown-toggle.badge.custom-btn-color1 {
-  font-size: 1rem; /* Ajusta el tamaño del texto */
-  padding: 10px 20px;
-}
-
-.nav-link.dropdown-toggle.badge.custom-btn-color1 span {
-  font-size: 1rem; /* Ajusta el tamaño del texto del span */
 }
 
 .custom-btn-color1 {
@@ -24,6 +18,11 @@
 }
 
 .footer-logo img {
+  max-width: 100px;
+  height: auto;
+  align-self: flex-start;
+}
+.logo img {
   max-width: 100px;
   height: auto;
   align-self: flex-start;
@@ -51,6 +50,12 @@
   align-items: flex-start;
   width: 100%;
 }
+h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff2e73;
+}
 
 .a {
   color: #ff9183;
@@ -63,6 +68,7 @@
 .a:hover {
   text-decoration: underline;
 }
+
 
 @media (max-width: 768px) {
   .barra {
@@ -78,5 +84,59 @@
   .footer-seccion {
     margin: 10px 0;
   }
+} */
+
+.navbar {
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
+.navbar-brand {
+  border-radius: 50%;
+  margin-right: 20px;
+  
+}
+.navbar-header{
+  margin-top: 100px;
+
+}
+.container-fluid {
+  background-color: #ffdad8;
+}
+
+.container {
+  font-family: "Comic Neue";
+}
+
+.logo {
+  width: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+  padding-left: 20px;
+}
+
+body {
+  margin-top: 150px;
+}
+
+.navbar-nav .nav-link {
+  margin-right: 10px;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+}
+
+.navbar-icons .nav-item {
+  padding-left: 10px;
+
+}
+
+.navbar-icons .nav-link img {
+  width: 24px;
+  height: 24px;
+}

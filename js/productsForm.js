@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const productsList = document.getElementById("productsList"); // Asegúrate de tener este elemento en tu HTML
 
     let isValid = true;
-    let datosProducto = new Array ();
+    let datosProducto = JSON.parse(localStorage.getItem('productos'))|| []; //Se crea el JSON para almacenar los productos en localStorage
 
     // Función para Cloudinary
     let widget_cloudinary = cloudinary.createUploadWidget({
@@ -90,8 +90,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 image: productImage,
                
             };
-
+            
             datosProducto.push(producto);
+            localStorage.setItem('productos', JSON.stringify(datosProducto));
+
+
             console.log(datosProducto);
 
             // Crear tarjetas de producto
@@ -121,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
               </div>`
             ); //beforeend
         });//forEach
-        
+    
         // Agregar eventos de clic a los botones de borrar
         const deleteButtons = document.querySelectorAll(".btn-delete");
         deleteButtons.forEach(button => {
@@ -132,17 +135,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 deleteProduct(productId);
             });
         });
+    
+}//function createCards
 
         function deleteProduct(id) {
         // Filtrar los productos para eliminar el producto con el id proporcionado
         datosProducto = datosProducto.filter(product => product.id != id);
+        localStorage.setItem('productos', JSON.stringify(datosProducto));
         // Volver a crear las tarjetas de producto
         createCards(datosProducto);
-        }
-    }//function createCards
-    
-});
-
-
-
+        //recargar la lista de productos en productos.html
+        window.location.reload();
+        }//función borrar productos
+        //Inicializa de nuevo la lista de productos una vez que se borro alguno
+        createCards(datosProducto);
+});//función borrar productos
 

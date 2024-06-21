@@ -140,10 +140,7 @@ function validarForm(event) {
       });
 
     // Reset form fields
-    nombre.value = "";
-    email.value = "";
-    telefono.value = "";
-    message.value = "";
+    document.getElementById("contact-form").reset();
 
     // },
     //   (error) => {
