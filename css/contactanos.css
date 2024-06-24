@@ -1,3 +1,12 @@
+body{
+  background-image: url('https://usagif.com/wp-content/uploads/gif/confetti-18.gif'); /* Ruta relativa a tu imagen local */
+  background-size: cover; /* Ajusta la imagen para cubrir toda la página */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; 
+  height: 100vh; /* Ajusta la altura del body al 100% del viewport height (pantalla) */
+  margin: 0; 
+}
+
 .mensaje-exito {
   display: flex;
   align-items: center;
