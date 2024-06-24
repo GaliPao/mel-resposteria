@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const productsList = document.getElementById("productsList"); // Asegúrate de tener este elemento en tu HTML
 
     let isValid = true;
-    let datosProducto = new Array ();
+    let datosProducto = JSON.parse(localStorage.getItem('productos'))|| []; //Se crea el JSON para almacenar los productos en localStorage
 
     // Función para Cloudinary
     let widget_cloudinary = cloudinary.createUploadWidget({
@@ -47,10 +47,11 @@ document.addEventListener("DOMContentLoaded", () => {
         alertaValidaciones.classList.add("d-none");
         isValid = true;
 
-        // Validaciones con expresiones regulares
-        const nameValidation = /^[a-zA-ZÀ-ÿ\s]{3,30}$/;
-        const descriptionValidation = /^[a-zA-ZÀ-ÿ\s]{10,200}$/;
+       // Validaciones con expresiones regulares
+        const nameValidation = /^[a-zA-ZÀ-ÿ\s]{3,30}$/;  // nombres con caracteres especiales, acentos y demas de 3-30 caracteres
+        const descriptionValidation = /^(?!.*(\w)\1{4})[0-9a-zA-ZÀ-ÿ\s]{10,200}$/; //descricion de 10 a 200 caracteres, letras, numeros, mayusculas y caratceres  especiales de escritura latina, no permite repetir caracteres 4 veces seguidas 
         const priceValidation = /^(0|[1-9]\d*)(\.\d{1,2})?$/;
+
 
         let mensajes = [];
 
@@ -90,8 +91,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 image: productImage,
                
             };
-
+            
             datosProducto.push(producto);
+            localStorage.setItem('productos', JSON.stringify(datosProducto));
+
+
             console.log(datosProducto);
 
             // Crear tarjetas de producto
@@ -121,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
               </div>`
             ); //beforeend
         });//forEach
-        
+    
         // Agregar eventos de clic a los botones de borrar
         const deleteButtons = document.querySelectorAll(".btn-delete");
         deleteButtons.forEach(button => {
@@ -132,17 +136,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 deleteProduct(productId);
             });
         });
+    
+}//function createCards
 
         function deleteProduct(id) {
         // Filtrar los productos para eliminar el producto con el id proporcionado
         datosProducto = datosProducto.filter(product => product.id != id);
+        localStorage.setItem('productos', JSON.stringify(datosProducto));
         // Volver a crear las tarjetas de producto
         createCards(datosProducto);
-        }
-    }//function createCards
-    
-});
-
-
-
+        //recargar la lista de productos en productos.html
+        window.location.reload();
+        }//función borrar productos
+        //Inicializa de nuevo la lista de productos una vez que se borro alguno
+        createCards(datosProducto);
+});//función borrar productos
 

@@ -1,13 +1,14 @@
 
+
 // mostrar alertas de bootstrap
-function mostrarAlerta(campoId, mensaje) {
+function mostrarAlerta(campoId, mensaje, tipo = "warning") {
     const alertContainer = document.getElementById(campoId);
     if (alertContainer) {
         alertContainer.innerText = mensaje;
+        alertContainer.className = `alert alert-${tipo}`;
         alertContainer.style.display = 'block';
     }
 }
-
 // ocultaar alertas de bootstrap
 function ocultarAlerta(campoId) {
     const alertContainer = document.getElementById(campoId);
@@ -22,12 +23,13 @@ const registroForm = document.querySelector("#registroFormulario");
 registroForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    // Ocultar las alertas al iniciar la validación
+    // ocultar las alertas al iniciar la validación
     ocultarAlerta("nameAlert");
     ocultarAlerta("emailRegistroAlert");
     ocultarAlerta("telefonoAlert");
     ocultarAlerta("passwordRegistroAlert");
     ocultarAlerta("passwordConfirmAlert");
+    ocultarAlerta("registroSuccessAlert");
 
     const nombre = document.querySelector("#name").value;
     const telefono = document.querySelector("#telefono").value;
@@ -36,9 +38,9 @@ registroForm.addEventListener("submit", (e) => {
     const confirmContraseña = document.querySelector("#passwordConfirm").value;
 
     // expresiones regulares y validaciones
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const telefonoRegex = /^[1-9]\d{9}$/;
-    const contraseñaRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/; 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;  
+    const telefonoRegex = /^(?!00)\d{2}(?!.*(\d)\1{6})\d{8}$/; //solo numeros como entrada , no se permite numeros repetidos consecutivamente 6 veces ni que empiezen con 00
+    const contraseñaRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/;  //contraeña con IhateRegEx para contraeñas con 1 Mayuscula,1 minuscula, 1 numero, 1 caracter especial de los siguientes  " #?!@$ %^&*- "
 
     let errores = false;
 
@@ -76,19 +78,17 @@ registroForm.addEventListener("submit", (e) => {
 
     usuarios.push({ nombre, telefono, email: emailRegistro, contraseña: contraseñaRegistro });
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
-    mostrarAlerta("emailRegistroAlert", "Registro exitoso", "success");
-    ocultarAlerta("emailRegistroAlert"); // Ocultar el mensaje de error al mostrar éxito
+    mostrarAlerta("registroSuccessAlert", "Registro exitoso", "success");
 
-    
+   
 });
-
 
 // =========================================== LOGIN ============================================/////
 const loginForm = document.querySelector("#loginForm");
 loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    // ocultar todas las alertas al iniciar la validación
+    // ocultar alertas al iniciar la validación
     ocultarAlerta("emailLoginAlert");
     ocultarAlerta("passwordLoginAlert");
 
@@ -104,23 +104,13 @@ loginForm.addEventListener("submit", (e) => {
     }
 
     mostrarAlerta("emailLoginAlert", `Bienvenido ${validarUsuario.nombre}`, "success");
-    ocultarAlerta("emailLoginAlert"); // Ocultar el mensaje de error al mostrar éxito
 
-    //Redireccionar a la página principal 
-    window.location.href = './index.html';
+    // redireccionar a la pagina de index despues de algunos segundos
+    setTimeout(() => {
+        ocultarAlerta("emailLoginAlert");
+    // redireccionar a la página principal 
+    window.location.href = 'index.html';
+        
+    }, 2000);
+    
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
