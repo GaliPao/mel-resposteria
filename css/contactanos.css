@@ -4,7 +4,7 @@ body{
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; 
   height: 100vh; /* Ajusta la altura del body al 100% del viewport height (pantalla) */
-  margin: 0; 
+  
 }
 
 .mensaje-exito {

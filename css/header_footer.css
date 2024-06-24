@@ -1,6 +1,8 @@
 /*Header*/
  header {
   font-family: "Comic Neue";
+  margin: 0;
+  padding: 0;
 }
 .custom-bg-rosa {
   background-color: #ffdad8;
@@ -80,11 +82,17 @@ h3 {
     flex-direction: column;
     align-items: center;
   }
+  /*Centra los iconos en modo responsivo*/
+  .navbar-icons {
+    justify-content: center;
+    width: 100%;
+  }
 
   .footer-seccion {
     margin: 10px 0;
   }
-} */
+} 
+
 
 .navbar {
   display: flex;
@@ -97,10 +105,11 @@ h3 {
   margin-right: 20px;
   
 }
+/* Eliminarlo para que el header quede pegado
 .navbar-header{
   margin-top: 100px;
 
-}
+}*/
 .container-fluid {
   background-color: #ffdad8;
 }
