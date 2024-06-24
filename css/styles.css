@@ -276,56 +276,6 @@ h4{
   gap: 100px;
   margin-left: 10px;
 }
-/* HEADER */
-/* FOOTER  FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
-
-/* .col {
-  justify-content: center;
-} */
-
-/* .barra {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items:center;
-  width: 100%;
-  background-color: white;
-} */
-
-/* .navegacion {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items:center;
-  width: 100%;
-} */
-
-/* h3 {
-  margin-bottom: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #ff2e73;
-} */
-
-/* 
-@media (max-width: 768px) {
-
-  .barra {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .navegacion {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .seccion {
-    margin: 10px 0;
-    
-  }
-}  */
-
 /* FOOTER  FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
 
 /* Carousel*/

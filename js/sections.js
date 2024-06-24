@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nav2.insertAdjacentHTML(
           "beforeend", `
       <div>
-          <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary"> 
+          <nav class="navbar fixed-top navbar-expand-sm bg-body-tertiary"> 
               <div class="container-fluid">
                   <a class="navbar-brand" href="#">
                       <img src="./src/fotos-team/logo.png" class="logo">
@@ -157,8 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                   aria-expanded="false">
                                   Acerca de Nostros
                               </a>
-                              <ul class="dropdown-menu">   
-                                  <li><a class="dropdown-item" href="#">Mel reposteria</a></li>
+                              <ul class="dropdown-menu">
                                   <li><a class="dropdown-item" href="acerca.html">Cookie Coding</a></li>
                               </ul>
                          
@@ -208,36 +207,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <a class="logo" href="#">
         <img src="./src/Iconos/oso.png" alt="logo mel reposteria" />
       </a>
-
-      <nav class="navegacion">
-        <div class="seccion conocenos">
-          <h3>Conócenos</h3>
-          <a href="./acerca.html">Acerca de nosotros</a>
-        </div>
-
-        <div class="seccion redes-sociales">
-          <h3>Redes sociales</h3>
-          <a href="https://www.instagram.com/melreposteriamx/">Instagram</a>
-          <a href="https://www.facebook.com/profile.php?id=100067550652660">Facebook</a>
-        </div>
-
-        <div class="seccion cursos">
-          <h3>Cursos</h3>
-          <a href="#">Decoración de flores</a>
-        </div>
-
-        <div class="seccion contacto">
-          <h3>Contacto</h3>
-          <a href="./contactanos.html"> Contáctanos</a>
-          <a href="./contactanos.html">Cotizaciones</a>
-        </div>
-
-        <div class="seccion mi-cuenta">
-          <h3>Mi cuenta</h3>
-          <a href="#">Iniciar sesión</a>
-          <a href="#">Registrarse</a>
-        </div>
-
+      <ul class="navbar-nav navbar-icons">
         <div class="seccion ubicacion">
           <h3>Ubicación</h3>
           <a href="#">Pachuca</a>

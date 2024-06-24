@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+HEAD
 *{
     margin: 0;
     padding: 0;
@@ -54,7 +54,7 @@
 @media only screen and (max-width:600px){
     .container{
         width: 100%;}
-=======
+    }
 .mensaje-exito {
   display: flex;
   align-items: center;
@@ -93,13 +93,10 @@
 .isValid {
   background-color: green;
 }
-<<<<<<< HEAD
+HEAD
 
 .form-control:required:focus {
   border-color: #dc3545;
 }
 
 /* Optional: Style placeholder text */
->>>>>>> 024a1112bd194f4697335160b440508dea375eaf
-=======
->>>>>>> 70d2e0ee8f363823490d1534aaef438f60594984
