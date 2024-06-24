@@ -36,3 +36,19 @@
 .isValid {
   background-color: green;
 }
+
+.osito-error {
+  width: 2rem;
+}
+
+.mensaje-incompleto {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  color: #fefefd;
+  font-size: 1.5rem;
+  font-weight: 400;
+  background-color: #ff2e7482;
+  top: 40vh;
+}
