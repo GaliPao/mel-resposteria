@@ -260,55 +260,55 @@ h4{
 /* CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS CARDS */
 
 /* HEADER  */
-header {
+/* header {
   font-family: "Comic Neue";
-}
+} */
 
-.custom-bg-rosa {
+/* .custom-bg-rosa {
   background-color: #ffdad8;
-  /* Color rosa claro en hexadecimal */
-}
-
-/* HEADER */
-/* FOOTER  FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
+  /* Color rosa claro en hexadecimal 
+} */
 .cards-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  gap: 20px;
+  gap: 100px;
   margin-left: 10px;
 }
-.col {
-  justify-content: center;
-}
+/* HEADER */
+/* FOOTER  FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
 
-.barra {
+/* .col {
+  justify-content: center;
+} */
+
+/* .barra {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   background-color: white;
-}
+} */
 
-.navegacion {
+/* .navegacion {
   display: flex;
   flex-wrap: wrap;
   flex: 1;
   justify-content: space-around;
   align-items: flex-start;
   width: 100%;
-}
+} */
 
-h3 {
+/* h3 {
   margin-bottom: 10px;
   font-size: 18px;
   font-weight: bold;
   color: #ff2e73;
-}
+} */
 
-
+/* 
 @media (max-width: 768px) {
 
   .barra {
@@ -323,12 +323,13 @@ h3 {
 
   .seccion {
     margin: 10px 0;
+    
   }
-}
+}  */
 
 /* FOOTER  FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
 
-/* Carousel */
+/* Carousel*/
 
 .container-carousel {
   max-width: 500px;
@@ -337,14 +338,14 @@ h3 {
 }
 
 /**LO SIGUIENTE ES PARA ANCLAR EL FOOTER HSTA LA PARTE DE ABAJO DE LA PAGINA */
-body {
-  margin: 0;
+ /* body {  */
+  /* margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-rows: auto 1fr auto; /* Divide la página en tres filas: auto, 1fr (fraccionada) y auto */
-  min-height: 100vh; /* Establece el alto mínimo del cuerpo para ocupar al menos toda la altura de la ventana */
-}
-/* Estilo para las card de productos  */
+  display: grid;  */
+  /* grid-template-rows: auto 1fr auto; /* Divide la página en tres filas: auto, 1fr (fraccionada) y auto */
+ /* min-height: 100vh; Establece el alto mínimo del cuerpo para ocupar al menos toda la altura de la ventana *
+}  
+ /* Estilo para las card de productos  */
 
 #list-items{
   display: flex;
