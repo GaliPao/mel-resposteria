@@ -51,7 +51,7 @@ function validarForm(event) {
 
   // Validate nombre
   if (!nombreTest.test(nombre.value.trim())) {
-    mensaje += "Llenar el campo de nombre correctamente \n";
+    mensaje += "Por favor, completa correctamente el campo del nombre. \n";
     invalido(nombre);
   } else {
     valido(nombre);
@@ -60,7 +60,7 @@ function validarForm(event) {
   // Validate email
   if (!emailTest.test(email.value.trim())) {
     mensaje +=
-      "Llenar el campo de correo correctamente \nPor ejemplo: correo123@gmail.com \n";
+      "Por favor, completa correctamente el campo de correo. \nPor ejemplo: correo123@gmail.com \n";
     invalido(email);
   } else {
     valido(email);
@@ -68,7 +68,7 @@ function validarForm(event) {
 
   // Validate telefono
   if (!numeroTest.test(telefono.value.trim())) {
-    mensaje += "Llenar el campo de telefono correctamente \n";
+    mensaje += "Por favor, completa correctamente el campo de teléfono \n";
     invalido(telefono);
   } else {
     valido(telefono);
@@ -101,7 +101,7 @@ function validarForm(event) {
           confirmacion.innerHTML = `
         <div class="mensaje-exito">
           <h2>Gracias 🎉 ${nombre.value}</h2>
-          <p>Hemos recibido tu mensaje, responderemos pronto 🍪</p>
+          <p>Hemos recibido tu mensaje y te responderemos pronto. 🍪 </p>
           <button class="btn-exito btn-cierre">Ok</button>
         </div>`; // mensaje que aparece cuando se mande el form por correo
 

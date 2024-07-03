@@ -40,27 +40,27 @@ registroForm.addEventListener("submit", (e) => {
     // expresiones regulares y validaciones
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;  
     const telefonoRegex = /^(?!00)\d{2}(?!.*(\d)\1{6})\d{8}$/; //solo numeros como entrada , no se permite numeros repetidos consecutivamente 6 veces ni que empiezen con 00
-    const contraseñaRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/;  //contraeña con IhateRegEx para contraeñas con 1 Mayuscula,1 minuscula, 1 numero, 1 caracter especial de los siguientes  " #?!@$ %^&*- "
+    const contraseñaRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/;  //contraeña con IhateRegEx para contraseñas con 1 Mayuscula,1 minuscula, 1 numero, 1 caracter especial de los siguientes  " #?!@$ %^&*- "
 
     let errores = false;
 
     if (!emailRegex.test(emailRegistro)) {
-        mostrarAlerta("emailRegistroAlert", "Email no válido");
+        mostrarAlerta("emailRegistroAlert", "Email no válido.");
         errores = true;
     }
 
     if (!telefonoRegex.test(telefono)) {
-        mostrarAlerta("telefonoAlert", "Teléfono no válido. Debe contener 10 dígitos.");
+        mostrarAlerta("telefonoAlert", "Teléfono no válido. Debe contener 10 dígitos, no se permiten números repetidos consecutivamente.");
         errores = true;
     }
 
     if (!contraseñaRegex.test(contraseñaRegistro)) {
-        mostrarAlerta("passwordRegistroAlert", "Contraseña no válida. Debe contener mínimo 8 caracteres, al menos una letra y un número.");
+        mostrarAlerta("passwordRegistroAlert", "Contraseña no válida. Debe contener al menos 1 mayúscula, 1 minúscula, 1 número y 1 carácter especial.");
         errores = true;
     }
 
     if (contraseñaRegistro !== confirmContraseña) {
-        mostrarAlerta("passwordConfirmAlert", "Las contraseñas no coinciden");
+        mostrarAlerta("passwordConfirmAlert", "Las contraseñas no coinciden.");
         errores = true;
     }
 
@@ -99,7 +99,7 @@ loginForm.addEventListener("submit", (e) => {
     const validarUsuario = usuarios.find(user => user.email === email && user.contraseña === contraseña);
 
     if (!validarUsuario) {
-        mostrarAlerta("emailLoginAlert", "Correo y/o contraseña incorrectos");
+        mostrarAlerta("emailLoginAlert", "Correo y/o contraseña incorrectos.");
         return;
     }
 

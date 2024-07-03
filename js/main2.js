@@ -33,10 +33,10 @@ const errorMensaje = function (elem) {
   }
   confirmacion.innerHTML = `
       <div class="mensaje-incompleto">
-        <h2>Form incompleto <span> <img class="osito-error" src="src/Iconos/sad_teddy.webp" alt=""></span> </h2>
+        <h2>Formulario incompleto <span> <img class="osito-error" src="src/Iconos/sad_teddy.webp" alt=""></span> </h2>
         <p> ${
           nombre.value ? nombre.value + "," : ""
-        } por favor completa la sección ${parentText}</p>
+        } Por favor completa la sección ${parentText}</p>
         <button class="btn-exito btn-cierre">Ok</button>
       </div>`; // Mensaje al tratar de mandar form incompleto
 
@@ -97,13 +97,8 @@ function validarForm(event) {
 
   // Validate telefono
   if (!numeroTest.test(telefono.value.trim())) {
-<<<<<<< HEAD
-    mensaje += "Llenar el campo de teléfono correctamente \n";
-    invalido(telefono);
-=======
     invalido(telefono, "telefono");
     formValid = false;
->>>>>>> ab1272a8f2501a04a000c71fb088ca833ce1b0a0
   } else {
     valido(telefono);
   }
@@ -116,51 +111,6 @@ function validarForm(event) {
     valido(message);
   }
 
-<<<<<<< HEAD
-  // Check if there are validation messages
-  if (mensaje.length > 0) {
-    alert(mensaje);
-  } else {
-    // If validation is successful, send the email
-    emailjs
-      .sendForm(
-        "service_m32z9s6",
-        "contact_form",
-        document.getElementById("contact-form")
-      )
-      .then(
-        () => {
-          console.log("SUCCESS!");
-          const confirmacion = document.createElement("div");
-          confirmacion.classList.add("mensaje-exito");
-          confirmacion.innerHTML = `
-        <div class="mensaje-exito">
-          <h2>Gracias 🎉 ${nombre.value}</h2>
-          <p>Hemos recibido tu mensaje, responderemos pronto, toma una galleta. 🍪</p>
-          <button class="btn-exito btn-cierre">Ok</button>
-        </div>`; // mensaje que aparece cuando se mande el form por correo
-
-          const containerForm = document.querySelector("#container");
-          containerForm.insertAdjacentElement("afterend", confirmacion);
-
-          // Boton de cierre
-          document
-            .querySelector(".btn-cierre")
-            .addEventListener("click", function () {
-              confirmacion.remove();
-            });
-
-          // Reset form fields
-          nombre.value = "";
-          email.value = "";
-          telefono.value = "";
-          message.value = "";
-        },
-        (error) => {
-          console.log("FAILED...", error);
-        }
-      );
-=======
   // If all fields are valid, send the email
   if (formValid) {
     // emailjs
@@ -178,7 +128,7 @@ function validarForm(event) {
     confirmacion.innerHTML = `
             <div class="mensaje-exito">
               <h2>Gracias 🎉 ${nombre.value}</h2>
-              <p>Hemos recibido tu mensaje, responderemos pronto 🍪</p>
+              <p>Hemos recibido tu mensaje y te responderemos pronto. 🍪 </p>
               <button class="btn-exito btn-cierre">Ok</button>
             </div>`;
 
@@ -201,6 +151,5 @@ function validarForm(event) {
     //     console.log("FAILED...", error);
     //   };
     // );
->>>>>>> ab1272a8f2501a04a000c71fb088ca833ce1b0a0
   }
 }

@@ -56,17 +56,17 @@ document.addEventListener("DOMContentLoaded", () => {
         let mensajes = [];
 
         if (!nameValidation.test(productName)) {
-            mensajes.push("El nombre del producto debe tener entre 3 y 30 caracteres.");
+            mensajes.push("El nombre del producto debe tener entre 3 y 30 carácteres.");
             isValid = false;
         }
 
         if (!descriptionValidation.test(productDescription)) {
-            mensajes.push("La descripción del producto debe tener entre 10 y 200 caracteres.");
+            mensajes.push("La descripción del producto debe tener entre 10 y 200 carácteres.");
             isValid = false;
         }
 
         if (!priceValidation.test(productPrice)|| parseFloat(productPrice) < 0)  {
-            mensajes.push("El precio ingresado no es correcto, solo números con hasta dos decimales.");
+            mensajes.push("El precio ingresado no es correcto; solo se permiten números con hasta dos decimales.");
             isValid = false;
         }
 
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   <h5 class="card-title">${p.title}</h5>
                   <p class="card-text">${p.description}</p>
                   <p class="card-text">${p.price}</p>                  
-                  <a href="#" class="btn btn-primary btn-delete">Borra producto</a>
+                  <a href="#" class="btn btn-primary btn-delete">Borrar producto</a>
                 </div>
               </div>`
             ); //beforeend

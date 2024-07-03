@@ -1,7 +1,19 @@
 /*Header*/
- header {
+header {
   font-family: "Comic Neue";
+  margin: 0;
+  padding: 0;
 }
+
+footer {
+  background-color: hsla(2, 78%, 91%, 0.482);
+  justify-items: center;
+}
+
+.list-unstyled {
+  padding-left: 10px;
+}
+
 .custom-bg-rosa {
   background-color: #ffdad8;
   /* Color rosa claro en hexadecimal */
@@ -20,7 +32,7 @@
 .footer-logo img {
   max-width: 100px;
   height: auto;
-  align-self: flex-start;
+  align-self:center
 }
 .logo img {
   max-width: 100px;
@@ -39,7 +51,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 .navegacion {
@@ -69,23 +81,16 @@ h3 {
   text-decoration: underline;
 }
 
+.bienvenidoSeccion {
+  display: flex;
+  flex-direction: row;
+}
 
-@media (max-width: 768px) {
-  .barra {
-    flex-direction: column;
-    text-align: center;
-  }
+.bienvenidosP {
+  margin-top: 25px;
+}
 
-  .navegacion {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-seccion {
-    margin: 10px 0;
-  }
-} */
-
+/*Navbar ocupe todo el espacio disponible*/
 .navbar {
   display: flex;
   margin: 0;
@@ -95,14 +100,13 @@ h3 {
 .navbar-brand {
   border-radius: 50%;
   margin-right: 20px;
-  
 }
-.navbar-header{
+.navbar-header {
   margin-top: 100px;
-
 }
+
 .container-fluid {
-  background-color: #ffdad8;
+  background-color: hsl(3, 100%, 92%);
 }
 
 .container {
@@ -128,15 +132,38 @@ body {
   display: flex;
   align-items: center;
   margin-left: auto;
-
 }
 
 .navbar-icons .nav-item {
   padding-left: 10px;
-
 }
 
 .navbar-icons .nav-link img {
   width: 24px;
   height: 24px;
+}
+
+@media (max-width: 768px) {
+  .barra {
+    flex-direction: column;
+    text-align: center;
+    background-color: #e2d8ff;
+  }
+
+  .navegacion {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /*Centra los iconos en modo responsivo*/
+  .navbar-icons {
+    justify-content: center;
+    width: 100%;
+    display: flex; /* Asegura que los iconos se muestren */
+  }
+
+  .footer-seccion {
+    margin: 10px 0;
+    position: relative;
+  }
 }

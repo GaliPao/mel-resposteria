@@ -72,9 +72,9 @@ function addEtiquetaItem(item) {
 // Lista de productos
 const products = [
     { name: 'Decoración estilo Acuarela', img: 'src/productos/acuarela3.jpg', description: 'Sumérgete en el emocionante universo de la decoración, donde aprenderás a transformar tus creaciones en auténticas obras de arte comestibles.', link: 'curso1.html', carrito: 'carrito.html' },
-    { name: 'Decoración de personajes', img: 'src/productos/bobesponjaHalloween.jpg', description: 'Aprende a decorar deliciosos postres con el divertido y colorido mundo de Bob Esponja y sus amigos.', link: 'curso2.html', carrito: 'carrito.html' },
+    { name: 'Decoración de Personajes', img: 'src/productos/bobesponjaHalloween.jpg', description: 'Aprende a decorar deliciosos postres con el divertido y colorido mundo de Bob Esponja y sus amigos.', link: 'curso2.html', carrito: 'carrito.html' },
     { name: 'Decoración de Catrinas', img: 'src/productos/catrina2.jpg', description: 'Descubre la tradición mexicana mientras aprendes a crear hermosas decoraciones inspiradas en esta emblemática figura del Día de los Muertos.', link: 'curso3.html', carrito: 'carrito.html' },
-    { name: 'Decoración de flores', img: 'src/productos/flores.jpg', description: 'Aprende el apasionante arte de la decoración donde crearás exquisitas flores de azúcar y otros adornos florales para embellecer tus dulces  creaciones y sorprender a tus seres queridos. ', link: 'curso4.html', carrito: 'carrito.html' },
+    { name: 'Decoración de Flores', img: 'src/productos/flores.jpg', description: 'Aprende el apasionante arte de la decoración donde crearás exquisitas flores de azúcar y otros adornos florales para embellecer tus dulces  creaciones y sorprender a tus seres queridos. ', link: 'curso4.html', carrito: 'carrito.html' },
 
 ];
 
@@ -113,20 +113,3 @@ function deleteProduct(id) {
     // Recargar la lista de productos
     loadProductsFromLocalStorage();
 }
-
-
-/* function recortar(item) {
-
-    let  maxPalabras= 50;
-    let array="";
-    if (item.description.length > maxPalabras) {
-        for (let i = 0; i< maxPalabras; i++) {
-            array = array + item.description[i];
-        }
-        array+="  ...";
-        item.description=array;
-
-        console.log(item.description);
-    }
-} POR HACER
-*/
