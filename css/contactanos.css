@@ -52,3 +52,20 @@
   background-color: #ff2e7482;
   top: 40vh;
 }
+
+body{
+    background-image: url('https://usagif.com/wp-content/uploads/gif/confetti-18.gif'); /* Ruta relativa a tu imagen local */
+    background-size: cover; /* Ajusta la imagen para cubrir toda la página */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; 
+    height: 100vh; /* Ajusta la altura del body al 100% del viewport height (pantalla) */
+    
+  }
+
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Divide la página en tres filas: auto, 1fr (fraccionada) y auto */
+  min-height: 100vh; /* Establece el alto mínimo del cuerpo para ocupar al menos toda la altura de la ventana */
+}/*Se agrega para que el footer se quede fijado /

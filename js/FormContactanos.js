@@ -60,7 +60,7 @@ function validarForm(event) {
   // Validate email
   if (!emailTest.test(email.value.trim())) {
     mensaje +=
-      "Por favor, completa correctamente el campo de correo. \nPor ejemplo: correo123@gmail.com \n";
+      "Por favor, completa correctamente el campo de correo. \nPor ejemplo: correo123@gmail.com\n";
     invalido(email);
   } else {
     valido(email);
@@ -76,7 +76,7 @@ function validarForm(event) {
 
   // Validate message
   if (!mensajeTest.test(message.value.trim())) {
-    mensaje += "El campo de mensaje está vacío \n";
+    mensaje += "El campo del mensaje está vacío.\n";
     invalido(message);
   } else {
     valido(message);

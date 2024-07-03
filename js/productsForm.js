@@ -47,11 +47,10 @@ document.addEventListener("DOMContentLoaded", () => {
         alertaValidaciones.classList.add("d-none");
         isValid = true;
 
-       // Validaciones con expresiones regulares
-        const nameValidation = /^[a-zA-ZÀ-ÿ\s]{3,30}$/;  // nombres con caracteres especiales, acentos y demas de 3-30 caracteres
-        const descriptionValidation = /^(?!.*(\w)\1{4})[0-9a-zA-ZÀ-ÿ\s]{10,200}$/; //descricion de 10 a 200 caracteres, letras, numeros, mayusculas y caratceres  especiales de escritura latina, no permite repetir caracteres 4 veces seguidas 
+        // Validaciones con expresiones regulares
+        const nameValidation = /^(?!.*(\w|\s)\1{3})[0-9a-zA-ZÀ-ÿ\s]{3,30}$/;  // nombres con caracteres especiales, acentos y demas de 3-30 caracteres
+        const descriptionValidation = /^(?!.*(\w|\s)\1{4})[0-9a-zA-ZÀ-ÿ!¡¿?'=()&/%$#"|+*´¨{}[\]\-.:,;<>_\s]{10,200}$/; //descripcion de 10 a 200 caracteres, letras, numeros, mayusculas y caracteres  especiales de escritura latina, no permite repetir caracteres 4 veces seguidas 
         const priceValidation = /^(0|[1-9]\d*)(\.\d{1,2})?$/;
-
 
         let mensajes = [];
 

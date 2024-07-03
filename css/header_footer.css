@@ -6,8 +6,7 @@ header {
 }
 
 footer {
-  background-color: hsla(2, 78%, 91%, 0.482);
-  justify-items: center;
+  background-color: #fef1f0;
 }
 
 .list-unstyled {
@@ -32,7 +31,7 @@ footer {
 .footer-logo img {
   max-width: 100px;
   height: auto;
-  align-self:center
+  align-self: flex-start;
 }
 .logo img {
   max-width: 100px;
@@ -51,7 +50,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
 }
 
 .navegacion {
@@ -106,7 +105,7 @@ h3 {
 }
 
 .container-fluid {
-  background-color: hsl(3, 100%, 92%);
+  background-color: #ffdad8;
 }
 
 .container {
@@ -147,7 +146,7 @@ body {
   .barra {
     flex-direction: column;
     text-align: center;
-    background-color: #e2d8ff;
+    background-color: #ffdad8;
   }
 
   .navegacion {
