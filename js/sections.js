@@ -96,13 +96,13 @@ document.addEventListener("DOMContentLoaded", function () {
   `
   );
   // Consiguiendo nombre
-  const valor = sessionStorage.getItem("usuarios");
-  const registro = JSON.parse(valor);
+  const valor = sessionStorage.getItem("Nombre ");
 
+  console.log(valor);
   const logIcons = document.getElementById("login-icons");
   const divNuevo = document.createElement("div");
   if (valor) {
-    const nombreUsuario = registro.nombre;
+    const nombreUsuario = valor;
     divNuevo.innerHTML = `<div class="bienvenidoSeccion"> <p class="bienvenidosP">Bienvenido ${nombreUsuario} 🐻</p> 
         <button type="button" class="btn btn-danger" id="cerrarSesionBtn">
           Cerrar sesión
@@ -112,13 +112,14 @@ document.addEventListener("DOMContentLoaded", function () {
     logIcons.appendChild(divNuevo);
 
     function deleteData() {
+      sessionStorage.removeItem("Nombre ");
+      sessionStorage.removeItem("Bearer ");
       sessionStorage.removeItem("usuarios");
     }
 
     //////Cerrar sesión//////////
 
     cerrarSesionBtn.addEventListener("click", () => {
-      const nombreUsuario = registro.nombre;
       divNuevo.innerHTML = `Nos vemos pronto ${nombreUsuario}! 🍪 `;
       deleteData();
       setTimeout(() => {
