@@ -42,11 +42,6 @@ registroForm.addEventListener("submit", (e) => {
   const confirmContraseñaForm = document.getElementById("passwordConfirm");
 
   // expresiones regulares y validaciones
-  //const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  //const telefonoRegex = /^[1-9]\d{9}$/;
-  //const contraseñaRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-
-  // expresiones regulares y validaciones
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const telefonoRegex = /^(?!0)\d{1}(?!.*(\d)\1{4})(?!.*0{4})\d{9}$/; //solo numeros como entrada , no se permite numeros repetidos consecutivamente 5 veces ni que empiezen con 0, y solo se puede repetir 3 veces seguidas el 0
   const contraseñaRegex =
@@ -127,24 +122,68 @@ loginForm.addEventListener("submit", (e) => {
   const contraseña = document.querySelector("#passwordLogin").value;
   const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-  const validarUsuario = usuarios.find(
-    (user) => user.email === email && user.contraseña === contraseña
-  );
+  const myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
 
-  if (!validarUsuario) {
-    mostrarAlerta("emailLoginAlert", "Correo y/o contraseña incorrectos.");
-    return;
-  }
+  const raw = `{ 
+  "email": "${email}",
+  "password": "${contraseña}" 
+  }`;
 
-  mostrarAlerta(
-    "emailLoginAlert",
-    `Bienvenido ${validarUsuario.nombre}`,
-    "success"
-  );
+  const requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: raw,
+    redirect: "follow",
+  };
 
-  sessionStorage.setItem("usuarios", JSON.stringify(validarUsuario));
+  fetch("http://localhost:8080/api/login/", requestOptions)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(
+          mostrarAlerta("emailLoginAlert", "Correo y/o contraseña incorrectos.")
+        );
+      }
+      return response.text();
+    })
+    .then((result) => {
+      const bearer = JSON.parse(result);
+      console.log(typeof bearer);
+      console.log(bearer);
+      console.log();
+      const { accessToken } = result;
+      mostrarAlerta("emailLoginAlert", `Bienvenido `, "success");
+      sessionStorage.setItem(
+        "usuarios",
+        `{ 
+  "email": "${email}",
+  "password": "${contraseña}" 
+  }`
+      );
+      sessionStorage.setItem("Bearer ", `Bearer ${bearer.accessToken}`);
 
-  // redireccionar a la pagina de index despues de algunos segundos
+      myHeaders.append("Authorization", `Bearer ${bearer.accessToken}`);
+
+      const requestOptions = {
+        method: "GET",
+        headers: myHeaders,
+        redirect: "follow",
+      };
+
+      fetch("http://localhost:8080/api/clientes/", requestOptions)
+        .then((response) => response.json())
+        .then((result) => {
+          console.log(result);
+          console.log(result[0]);
+          for (let i = 0; i < result.length; i++) {
+            if (result[i].email === email) {
+              sessionStorage.setItem("Nombre ", result[i].nombre);
+            }
+          }
+        })
+        .catch((error) => console.error(error));
+    })
+    .catch((error) => console.error(error));
   setTimeout(() => {
     ocultarAlerta("emailLoginAlert");
     // redireccionar a la página principal
