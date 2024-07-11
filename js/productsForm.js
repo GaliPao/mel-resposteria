@@ -108,7 +108,31 @@ document.addEventListener("DOMContentLoaded", () => {
         precio: productPrice,
         img: productImage,
       };
+//======================================================================================  FETCH POST PRODUCTOS
 
+      const myHeaders = new Headers();
+      myHeaders.append("Authorization", "Bearer: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoidXNlciIsImlhdCI6MTcyMDcxMTk1OSwiZXhwIjoxNzIwNzQ3OTU5fQ.u5ONmCQHiYUxIFUAHZcqabQAhN3LLdhVY7Ygjm43Yd8");
+      myHeaders.append("Content-Type", "application/json");
+      const raw = JSON.stringify({
+        "nombre": productName,
+        "descripcion": productDescription,
+        "imagen": productImage,
+        "precio": productPrice
+      });
+      const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow"
+      };
+     let product;
+      fetch("http://localhost:8080/api/productos/", requestOptions)
+        .then((response) => response.json())
+        .then((result) =>  product=result)
+        .catch((error) => console.error(error));
+
+//======================================================================================  FETCH POST PRODUCTOS
+      
       datosProducto.push(producto);
       localStorage.setItem("productos", JSON.stringify(datosProducto));
 
